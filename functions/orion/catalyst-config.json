@@ -1,0 +1,10 @@
+{
+	"deployment": {
+		"name": "orion",
+		"stack": "node14",
+		"type": "advancedio"
+	},
+	"execution": {
+		"main": "index.js"
+	}
+}

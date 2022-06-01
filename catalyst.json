@@ -1,0 +1,19 @@
+{
+  "functions": {
+    "targets": [
+      "orion"
+    ],
+    "ignore": [],
+    "source": "functions"
+  },
+  "client": {
+    "source": "client/build",
+    "plugin": "zcatalyst-cli-plugin-react",
+    "scripts": {
+      "packageJson": "cd client && copy client-package.json build",
+      "build": "cd client && npm install && npm run build",
+      "preserve": "catalyst run client:build && catalyst run client:packageJson",
+      "predeploy": "catalyst run client:build && catalyst run client:packageJson"
+    }
+  }
+}
