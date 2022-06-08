@@ -1,6 +1,6 @@
 import React from "react";
 
-function ButtonPrimary({
+function ButtonSecondary({
     children,
     id,
     addClass = "",
@@ -11,11 +11,11 @@ function ButtonPrimary({
     return (
         <button
             id={id}
-            className={`px-3 py-1 rounded-lg text-m uppercase border-2 shadow-sm ${
+            className={`px-3 py-1 rounded-lg text-base font-bold uppercase border-2 shadow-sm ${
                 disabled
                 ? "bg-gray-200"
-                : "bg-orionBlue border-orionBlue hover:bg-[#5179DF] hover:border-[#5179DF]"
-            } text-white ${addClass}`}
+                : "bg-orionYellow border-orionYellow hover:bg-yellow-300"
+            } text-almostblack ${addClass}`}
             disabled={disabled}
             onClick={onClick}
             {...props}
@@ -25,4 +25,4 @@ function ButtonPrimary({
     )
 }
 
-export default ButtonPrimary;
+export default ButtonSecondary;
