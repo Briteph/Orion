@@ -12,7 +12,7 @@ root.render(
       <Routes>
           <Route path='/app' element={<Dashboard/>}/>
           <Route path='/candidate' element={<CandidateTab/>}/>
-          <Route path='/requistion' element={<RequisitionTab/>}/>
+          <Route path='/requisition' element={<RequisitionTab/>}/>
       </Routes>
     </Router>
   </React.StrictMode>,
