@@ -5,9 +5,7 @@ function Card({ children, id, addClass }) {
         <div
             id={id}
             className={
-            "relative px-5 py-7 border-gray-100 bg-white rounded-lg drop-shadow-lg items-center" +
-            addClass
-            }
+            `relative px-5 py-7 border-gray-100 bg-white rounded-lg drop-shadow-lg items-center ${addClass}` }
         >
             {children}
         </div>
