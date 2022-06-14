@@ -1,6 +1,5 @@
 import React from "react";
 
-import { FaSortDown as SortDown } from 'react-icons/fa'
 function FormSelect({
   children,
   id,
@@ -10,6 +9,8 @@ function FormSelect({
   defValue,
   options = [],
   onChange,
+  icon,
+  addClass
 }) {
   return (
     <div>
@@ -24,7 +25,7 @@ function FormSelect({
                 name={id}
                 id={id}
                 value={value}
-                className="w-full px-5 text-[#5179DF] font-bold appearance-none bg-[#EDEDED] focus:outline-none"
+                className={`w-full px-5 font-bold appearance-none bg-[#EDEDED] focus:outline-none ${addClass}`}
                 onChange={onChange}
             >
                 <option value="">{defValue}</option>
@@ -34,7 +35,7 @@ function FormSelect({
                 </option>
                 ))}
             </select>
-            <SortDown className="text-[#5179DF] absolute bottom-2 right-0" />
+            {icon}
         </div>
     </div>
     );

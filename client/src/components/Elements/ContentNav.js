@@ -17,7 +17,7 @@ function ContentNav({children}) {
                     <div className='navLinks mt-5 grid ml-12 '>
                         <Link to= {"/app"}>
                             <div className={` py-3 flex rounded-l-3xl pl-8
-                            ${useLocation().pathname === '/app/'? 'text-white bg-[#5179DF] drop-shadow-xl': '' }
+                            ${useLocation().pathname === '/app'? 'text-white bg-[#5179DF] drop-shadow-xl': '' }
                             `}>
                                 <span className='pt-1 mr-2'>
                                     <Dashboard/>
@@ -25,9 +25,9 @@ function ContentNav({children}) {
                                 Dashboard
                             </div>
                         </Link>
-                        <Link to= {"/requisition"}>
+                        <Link to= {"/app/requisition"}>
                             <div className={` py-3 flex rounded-l-3xl pl-8
-                            ${useLocation().pathname === '/requisition'? 'text-white bg-[#5179DF] drop-shadow-xl': '' }
+                            ${useLocation().pathname === '/app/requisition'? 'text-white bg-[#5179DF] drop-shadow-xl': '' }
                             `}>
                                 <span className='pt-1 mr-2'>
                                     <Requisition/>
@@ -35,9 +35,9 @@ function ContentNav({children}) {
                                 Requisition
                             </div>
                         </Link>
-                        <Link to= {"/candidate"}>
+                        <Link to= {"/app/candidate"}>
                             <div className={` py-3 flex rounded-l-3xl pl-8
-                            ${useLocation().pathname === '/candidate'? 'text-white bg-[#5179DF] drop-shadow-xl': '' }
+                            ${useLocation().pathname === '/app/candidate'? 'text-white bg-[#5179DF] drop-shadow-xl': '' }
                             `}>
                                 <span className='pt-1 mr-2'>
                                     <Candidate/>

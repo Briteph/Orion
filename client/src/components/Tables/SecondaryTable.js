@@ -2,7 +2,8 @@ import React, { useMemo } from "react"
 import { useTable } from 'react-table'
 
 
-function Table({tableColumns, entryData}) {
+
+function SecondaryTable({tableColumns, entryData}) {
     const columns = useMemo (() => tableColumns, [])
     const data = useMemo (() => entryData, [])
     const tableInstance = useTable({
@@ -15,7 +16,7 @@ function Table({tableColumns, entryData}) {
         getTableBodyProps, 
         headerGroups, 
         rows, 
-        prepareRow,
+        prepareRow
     } = tableInstance
 
     return (
@@ -39,7 +40,7 @@ function Table({tableColumns, entryData}) {
                         rows.map(row => {
                             prepareRow(row)
                             return (
-                                <tr className="hover:bg-[#F5F5F5]" {...row.getRowProps()}>
+                                <tr className="hover:bg-[#5179DF] hover:bg-opacity-25" {...row.getRowProps()}>
                                     {
                                         row.cells.map((cell) => {
                                             return <td className="p-5 border-b-[0.5px] border-[#D3D3D3]" {...cell.getCellProps()}>
@@ -58,4 +59,4 @@ function Table({tableColumns, entryData}) {
     )
 }
 
-export default Table;
+export default SecondaryTable;

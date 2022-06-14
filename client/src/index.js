@@ -13,10 +13,10 @@ root.render(
     <Router>
       <Routes>
           <Route path='/app/' element={<Dashboard/>}/>
-          <Route path='/candidate' element={<CandidateTab/>}/>
-          <Route path='/requisition' element={<RequisitionTab/>}/>
-          <Route path='/add/addCandidate' element={<AddCandidate/>}/>
-          <Route path='/add/addRequisition' element={<AddRequisition/>}/>
+          <Route path='/app/candidate' element={<CandidateTab/>}/>
+          <Route path='/app/requisition' element={<RequisitionTab/>}/>
+          <Route path='/app/addCandidate' element={<AddCandidate/>}/>
+          <Route path='/app/addRequisition' element={<AddRequisition/>}/>
       </Routes>
     </Router>
   </React.StrictMode>,

@@ -6,12 +6,12 @@ import Card from '../components/Elements/card.js';
 import ContentNav from '../components/Elements/ContentNav';
 import { FaUserPlus as AddIcon } from 'react-icons/fa'
 import { BiChevronsDown as DownIcon } from 'react-icons/bi'
-import Table from '../components/Tables/Table.js';
+import Table from '../components/Tables/SecondaryTable.js';
 import NewCandidates from '../components/Tables/NewCandidates.json'
 import NewRequisitions from '../components/Tables/NewRequisition.json'
 import { NewCandidateCOLUMNS, NewRequisitionCOLUMNS } from "../components/Tables/Columns"
 import FormSelect from '../components/Forms/FormSelect.js';
-
+import { FaSortDown as SortDown } from 'react-icons/fa'
 function Dashboard() {
     return (
         <>
@@ -25,7 +25,7 @@ function Dashboard() {
                             <span className='text-[#7F8289] font-bold'>
                                 Show :
                             </span>
-                            <FormSelect defValue={'This Year'} options={[{key:1,value:"Last Year", text:"Last Year"}]}/>
+                            <FormSelect defValue={'This Year'} options={[{key:1,value:"Last Year", text:"Last Year"}]} icon = {<SortDown className="text-[#5179DF] absolute bottom-2 right-0"/>} addClass='text-[#5179DF]'/>
                         </div>
                     </div>
                     <div className='KPI-container mt-4 grid grid-cols-4 px-2'>

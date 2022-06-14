@@ -1,10 +1,16 @@
 import React from 'react'
+import Card from '../components/Elements/card';
 function AddCandidate() {
     return (
         <>
-            <h1 className="text-3xl font-bold underline">
-                add Candidate page world!
-            </h1>
+            <div className='Candidate_Form m-10'>
+                <div className='header text-[30px] mb-3 font-bold text-[#2B4993]'>
+                    Candidate Form
+                </div>
+                <Card>
+                    
+                </Card>
+            </div>
         </>
     );
 }
