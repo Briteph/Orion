@@ -7,7 +7,7 @@ import { FaUserPlus as AddIcon } from 'react-icons/fa'
 import ButtonPrimary from '../Elements/buttonPrimary';
 import { GlobalFilter } from "../Elements/GlobalFilter"
 
-function PrimaryTable({tableColumns, entryData}) {
+function PrimaryTable({tableColumns, entryData, newEntryLabel}) {
     
     const columns = useMemo (() => tableColumns, [tableColumns])
     const data = useMemo (() => entryData, [entryData])
@@ -94,7 +94,7 @@ function PrimaryTable({tableColumns, entryData}) {
                         {/* <FormSelect defValue={'Filter'} addClass='text-[#7F8289] rounded-lg py-1 pr-9 pl-12 bg-[#FFFFFF] drop-shadow-xl' icon={<Filter className='text-[#7F8289] bottom-2 left-7 absolute '/>}></FormSelect> */}
                         <GlobalFilter preGlobalFilteredRows={preGlobalFilteredRows} setGlobalFilter={setGlobalFilter} globalFilter={state.globalFilter} placeHolder={'Search here'} addClass='ml-5 drop-shadow-xl'/>
                         <ButtonPrimary addClass='bg-[#2B4993] text-[#FFFFFF] flex ml-5'>
-                            <span className='pt-1 mr-1'><AddIcon/></span>Add Candidate
+                            <span className='pt-1 mr-1'><AddIcon/></span>{newEntryLabel}
                         </ButtonPrimary>
                     </div>
                 </div>
