@@ -1,6 +1,6 @@
 import React from "react";
 
-function ButtonSecondary({
+function ButtonReset({
     children,
     id,
     addClass = "",
@@ -11,11 +11,11 @@ function ButtonSecondary({
     return (
         <button
             id={id}
-            className={`px-3 py-1 rounded-lg font-bold text-[14px] border-2 shadow-sm ${
+            className={`px-3 py-1 rounded-lg text-m uppercase border-2 shadow-sm ${
                 disabled
                 ? "bg-gray-200"
-                : "bg-[#FEAC00] border-[#FEAC00] hover:bg-yellow-300"
-            } text-almostblack ${addClass}`}
+                : "hover:bg-[#F47E7E] hover:border-[#F47E7E]"
+            } text-white ${addClass}`}
             disabled={disabled}
             onClick={onClick}
             {...props}
@@ -25,4 +25,4 @@ function ButtonSecondary({
     )
 }
 
-export default ButtonSecondary;
+export default ButtonReset;

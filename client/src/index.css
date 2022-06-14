@@ -31,3 +31,7 @@ code {
 .border-orionYellow {
   border-color: #FEAC00;
 }
+
+.rowContainer + .rowContainer{
+  margin-top: 1rem;
+}
