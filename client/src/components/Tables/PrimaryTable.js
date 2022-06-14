@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useRef, useState } from "react";
 import {
   useTable,
   useRowSelect,
@@ -11,8 +11,10 @@ import { BsFillTrashFill as TrashCan } from "react-icons/bs";
 import { FaUserPlus as AddIcon } from "react-icons/fa";
 import ButtonPrimary from "../Elements/buttonPrimary";
 import { GlobalFilter } from "../Elements/GlobalFilter";
+import DropDown from "../Elements/DropDown";
 
 function PrimaryTable({ tableColumns, entryData }) {
+  const dropDownRef = useRef(null);
   const [colState, setColState] = useState(tableColumns);
   const [rowState, setRowState] = useState(entryData);
   const columns = useMemo(() => {
@@ -129,21 +131,80 @@ function PrimaryTable({ tableColumns, entryData }) {
               ))}
             </thead>
             <tbody className="" {...getTableBodyProps}>
-              {rows.map((row) => {
+              {rows.map((row, rowIndex) => {
                 prepareRow(row);
                 return (
                   <tr
                     className="hover:bg-[#5179DF] hover:bg-opacity-25"
                     {...row.getRowProps()}
                   >
-                    {row.cells.map((cell) => {
+                    {row.cells.map((cell, i) => {
                       return (
-                        <td
-                          className="p-5 border-b-[0.5px] border-[#D3D3D3]"
-                          {...cell.getCellProps()}
-                        >
-                          {cell.render("Cell")}
-                        </td>
+                        <>
+                          {i === 2 ? (
+                            <td
+                              className="p-5 border-b-[0.5px] border-[#D3D3D3]"
+                              {...cell.getCellProps()}
+                            >
+                              <DropDown
+                                label={cell.render("Cell")}
+                                buttonClass={
+                                  cell.value === "Open"
+                                    ? "bg-[#5179DF]"
+                                    : cell.value === "Closed"
+                                    ? "bg-[#F47E7E]"
+                                    : cell.value === "Filled"
+                                    ? "bg-[#5DA36D]"
+                                    : ""
+                                }
+                                labelClass="text-white"
+                                iconClass="text-white"
+                                ref={dropDownRef}
+                              >
+                                <div
+                                  className="hover:bg-[#5179DF] hover:bg-opacity-25"
+                                  onClick={() => {
+                                    let newRowState = [...rowState];
+                                    newRowState[rowIndex].Status = "Open";
+                                    setRowState(newRowState);
+                                    dropDownRef.current.toggle();
+                                  }}
+                                >
+                                  Open
+                                </div>
+                                <div
+                                  className="hover:bg-[#5179DF] hover:bg-opacity-25"
+                                  onClick={() => {
+                                    let newRowState = [...rowState];
+                                    newRowState[rowIndex].Status = "Closed";
+                                    setRowState(newRowState);
+                                    dropDownRef.current.toggle();
+                                  }}
+                                >
+                                  Closed
+                                </div>
+                                <div
+                                  className="hover:bg-[#5179DF] hover:bg-opacity-25"
+                                  onClick={() => {
+                                    let newRowState = [...rowState];
+                                    newRowState[rowIndex].Status = "Filled";
+                                    setRowState(newRowState);
+                                    dropDownRef.current.toggle();
+                                  }}
+                                >
+                                  Filled
+                                </div>
+                              </DropDown>
+                            </td>
+                          ) : (
+                            <td
+                              className="p-5 border-b-[0.5px] border-[#D3D3D3]"
+                              {...cell.getCellProps()}
+                            >
+                              {cell.render("Cell")}
+                            </td>
+                          )}
+                        </>
                       );
                     })}
                   </tr>
