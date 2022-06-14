@@ -13,7 +13,7 @@ import ButtonPrimary from "../Elements/buttonPrimary";
 import { GlobalFilter } from "../Elements/GlobalFilter";
 import DropDown from "../Elements/DropDown";
 
-function PrimaryTable({ tableColumns, entryData }) {
+function PrimaryTable({ tableColumns, entryData, newEntryLabel }) {
   const dropDownRef = useRef(null);
   const [colState, setColState] = useState(tableColumns);
   const [rowState, setRowState] = useState(entryData);
@@ -27,6 +27,7 @@ function PrimaryTable({ tableColumns, entryData }) {
     {
       columns,
       data,
+
     },
     useGlobalFilter,
     useSortBy,
@@ -103,10 +104,10 @@ function PrimaryTable({ tableColumns, entryData }) {
                 addClass="ml-5 drop-shadow-xl"
               />
               <ButtonPrimary addClass="bg-[#2B4993] text-[#FFFFFF] flex ml-5">
-                <span className="pt-1 mr-1">
-                  <AddIcon />
+                <span className='pt-1 mr-1'>
+                  <AddIcon/>
                 </span>
-                Add Candidate
+                {newEntryLabel}
               </ButtonPrimary>
             </div>
           </div>

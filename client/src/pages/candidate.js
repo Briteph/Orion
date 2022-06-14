@@ -9,7 +9,7 @@ function CandidateTab() {
         <>
             <ContentNav>
                 <div className='Table'>
-                    <Table entryData={Candidates} tableColumns={CandidateCOLUMNS} />
+                    <Table entryData={Candidates} tableColumns={CandidateCOLUMNS} newEntryLabel="Add Candidate"/>
                 </div>
             </ContentNav>
         </>
