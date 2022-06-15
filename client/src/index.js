@@ -15,8 +15,8 @@ root.render(
           <Route path='/app/' element={<Dashboard/>}/>
           <Route path='/app/candidate' element={<CandidateTab/>}/>
           <Route path='/app/requisition' element={<RequisitionTab/>}/>
-          <Route path='/app/addCandidate' element={<AddCandidate/>}/>
-          <Route path='/app/addRequisition' element={<AddRequisition/>}/>
+          <Route path='/app/add-candidate' element={<AddCandidate/>}/>
+          <Route path='/app/add-requisition' element={<AddRequisition/>}/>
       </Routes>
     </Router>
   </React.StrictMode>,

@@ -40,7 +40,7 @@ function Dashboard() {
                                 <div className='text-[#2B4993] font-bold text-[20px]'>
                                     New Candidate
                                 </div>
-                                <Link to={"/app/addCandidate"}>
+                                <Link to={"/app/add-candidate"}>
                                     <ButtonSecondary addClass='text-white flex items-center text-[14px]'>
                                         <span className='mr-1'><AddIcon/></span>
                                         Add Candidate
@@ -61,7 +61,7 @@ function Dashboard() {
                                 <div className='text-[#2B4993] font-bold text-[20px]'>
                                     New Requisition
                                 </div>
-                                <Link to= {"/app/addRequisition"}>
+                                <Link to= {"/app/add-requisition"}>
                                     <ButtonSecondary addClass='text-white flex items-center '>
                                         <span className='mr-1'><AddIcon/></span>
                                         Add Requisition

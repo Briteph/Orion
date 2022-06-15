@@ -8,7 +8,7 @@ function RequisitionTab() {
         <>
             <ContentNav>
                 <div className='Table'>
-                    <Table entryData={Requisitions} tableColumns={RequisitionCOLUMNS} newEntryLabel="Add Requisition"/>
+                    <Table entryData={Requisitions} tableColumns={RequisitionCOLUMNS} newEntryLabel="Add Requisition" buttonUrl={"/app/add-requisition"}/>
                 </div>
             </ContentNav>
         </>
