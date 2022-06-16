@@ -38,10 +38,6 @@ export const NewRequisitionCOLUMNS = [
 
 export const RequisitionCOLUMNS = [
     {
-        Header: 'ID',
-        accessor: 'ID'
-    },
-    {
         Header: 'Status',
         accessor: 'Status'
     },

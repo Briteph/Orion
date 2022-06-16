@@ -40,7 +40,7 @@ function Dashboard() {
                                 <div className='text-[#2B4993] font-bold text-[20px]'>
                                     New Candidate
                                 </div>
-                                <Link to={"/app/add-candidate"}>
+                                <Link to={"/app/candidate/add-candidate"}>
                                     <ButtonSecondary addClass='text-white flex items-center text-[14px]'>
                                         <span className='mr-1'><AddIcon/></span>
                                         Add Candidate
@@ -48,7 +48,7 @@ function Dashboard() {
                                 </Link>
                             </div>
                             <div className='NewCandidate-table'>
-                                <Table tableColumns={NewCandidateCOLUMNS} entryData={NewCandidates}/>
+                                <Table tableColumns={NewCandidateCOLUMNS} entryData={NewCandidates} rowUrl="/app/candidate/profile"/>
                                 <div className='text-[#2B4993] flex justify-center my-5 font-bold bottom-0 '>
                                     <div className='hover:text-[#5179DF] flex'>
                                         See More<span className='mr-1 pt-[0.1rem] text-[22px]'><DownIcon/></span>
@@ -69,7 +69,7 @@ function Dashboard() {
                                 </Link>
                             </div>
                             <div className='NewRequisition-table'>
-                                <Table tableColumns={NewRequisitionCOLUMNS} entryData={NewRequisitions}/>
+                                <Table tableColumns={NewRequisitionCOLUMNS} entryData={NewRequisitions} rowUrl={``}/>
                             </div>
                             <div className='text-[#2B4993] flex m-auto my-5 font-bold justify-center align-bottom'>
                                 <div className='hover:text-[#5179DF] flex'>
