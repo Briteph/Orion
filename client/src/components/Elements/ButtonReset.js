@@ -1,6 +1,6 @@
 import React from "react";
 
-function ButtonPrimary({
+function ButtonReset({
     children,
     id,
     addClass = "",
@@ -14,7 +14,7 @@ function ButtonPrimary({
             className={`px-3 py-1 rounded-lg text-m uppercase border-2 shadow-sm ${
                 disabled
                 ? "bg-gray-200"
-                : "hover:bg-[#5179DF] hover:border-[#5179DF]"
+                : "hover:bg-[#F47E7E] hover:border-[#F47E7E]"
             } text-white ${addClass}`}
             disabled={disabled}
             onClick={onClick}
@@ -25,4 +25,4 @@ function ButtonPrimary({
     )
 }
 
-export default ButtonPrimary;
+export default ButtonReset;

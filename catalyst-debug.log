@@ -1055,3 +1055,701 @@ Error: read ECONNRESET
     at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
 [debug] [2022-06-09T06:25:21.231Z] : Error Status: 500
 [info] [2022-06-09T06:25:21.232Z] : Kindly contact Catalyst support [support@zohocatalyst.com] if you need any further assistance
+[debug] [2022-06-10T05:44:44.475Z] : 
+[debug] [2022-06-10T05:44:44.478Z] : ----------------------------------------------------------------------
+[debug] [2022-06-10T05:44:44.478Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\kentc\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js serve
+[debug] [2022-06-10T05:44:44.479Z] : CLI Version:  1.13.1
+[debug] [2022-06-10T05:44:44.479Z] : Platform:     win32
+[debug] [2022-06-10T05:44:44.480Z] : Node Version: v14.15.4
+[debug] [2022-06-10T05:44:44.483Z] : Time:         Fri Jun 10 2022 13:44:44 GMT+0800 (Philippine Standard Time)
+[debug] [2022-06-10T05:44:44.483Z] : ----------------------------------------------------------------------
+[debug] [2022-06-10T05:44:44.483Z] : 
+[debug] [2022-06-10T05:44:48.358Z] : > authorizing via signed-in user option
+[debug] [2022-06-10T05:44:48.360Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL"]
+[debug] [2022-06-10T05:44:48.430Z] : > refreshing access token <
+[debug] [2022-06-10T05:44:48.435Z] : >>>> HTTP REQUEST : POST https://accounts.zoho.com/oauth/v2/token 
+<request body omitted>
+
+[debug] [2022-06-10T05:44:49.712Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 10 Jun 2022 05:44:48 GMT","content-type":"application/json;charset=UTF-8","content-length":"169","connection":"close","set-cookie":["b266a5bf57=a711b6da0e6cbadb5e254290f114a026; Path=/","iamcsr=51da2383-0234-4149-977d-c433e36d1cad;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=51da2383-0234-4149-977d-c433e36d1cad;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"SAMEORIGIN","content-language":"en-US","strict-transport-security":"max-age=63072000"}
+
+[debug] [2022-06-10T05:44:49.732Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/8912000000029014 
+
+[debug] [2022-06-10T05:44:51.313Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 10 Jun 2022 05:44:50 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=04d9a2d1e2e86744f9516a3e9f805f56; Path=/","ZD_CSRF_TOKEN=4ba14802-8a3a-4d1c-9aa2-566cecbe9bba;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=4ba14802-8a3a-4d1c-9aa2-566cecbe9bba;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2022-06-10T05:44:51.315Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/8912000000029014/environment 
+
+[debug] [2022-06-10T05:44:51.946Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 10 Jun 2022 05:44:51 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=63dd9cf89a6678b816d9580ec827ee61; Path=/","ZD_CSRF_TOKEN=e1d4953f-d623-4117-bbb9-bec8b3235835;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=e1d4953f-d623-4117-bbb9-bec8b3235835;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2022-06-10T05:44:57.032Z] : 
+[debug] [2022-06-10T05:44:57.035Z] : ----------------------------------------------------------------------
+[debug] [2022-06-10T05:44:57.037Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\kentc\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js run client:build
+[debug] [2022-06-10T05:44:57.038Z] : CLI Version:  1.13.1
+[debug] [2022-06-10T05:44:57.038Z] : Platform:     win32
+[debug] [2022-06-10T05:44:57.039Z] : Node Version: v14.15.4
+[debug] [2022-06-10T05:44:57.042Z] : Time:         Fri Jun 10 2022 13:44:57 GMT+0800 (Philippine Standard Time)
+[debug] [2022-06-10T05:44:57.043Z] : ----------------------------------------------------------------------
+[debug] [2022-06-10T05:44:57.043Z] : 
+[debug] [2022-06-10T05:44:59.709Z] : > authorizing via signed-in user option
+[debug] [2022-06-10T05:44:59.710Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL"]
+[debug] [2022-06-10T05:44:59.741Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/8912000000029014 
+
+[debug] [2022-06-10T05:45:00.493Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 10 Jun 2022 05:44:59 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=04d9a2d1e2e86744f9516a3e9f805f56; Path=/","ZD_CSRF_TOKEN=22e6fa15-7b20-43a4-b2d1-56eadf510078;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=22e6fa15-7b20-43a4-b2d1-56eadf510078;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2022-06-10T05:45:00.503Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/8912000000029014/environment 
+
+[debug] [2022-06-10T05:45:01.195Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 10 Jun 2022 05:45:00 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=63dd9cf89a6678b816d9580ec827ee61; Path=/","ZD_CSRF_TOKEN=c201b981-03b4-4897-9f1d-663e20da3b3b;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=c201b981-03b4-4897-9f1d-663e20da3b3b;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[info] [2022-06-10T05:45:01.349Z] : 
+[info] [2022-06-10T05:45:01.351Z] : Executing build script in C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3
+[debug] [2022-06-10T05:45:01.351Z] : Executing command > cd client && npm install && npm run build
+[info] [2022-06-10T05:45:01.560Z] : > cd client && npm install && npm run build
+[debug] [2022-06-10T05:46:40.261Z] : NO ERRORS REGISTERED
+[debug] [2022-06-10T05:46:40.262Z] : EXEC ENDED with event: run-script, message: success
+[debug] [2022-06-10T05:46:40.263Z] : TOTAL DURATION OF COMMAND EXEC : 100637
+[debug] [2022-06-10T05:46:40.320Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.com/baas/v1/cli/logs 
+<request body omitted>
+
+[debug] [2022-06-10T05:46:41.436Z] : <<<< HTTP RESPONSE : 400
+Response Headers: {"server":"ZGS","date":"Fri, 10 Jun 2022 05:46:40 GMT","content-type":"application/json;charset=ISO-8859-1","content-length":"127","connection":"close","set-cookie":["46512fd555=ba2a1b22f2a5e14b0d2647f7e38884fc; Path=/","ZD_CSRF_TOKEN=7bb43ebd-37a6-43f6-b7be-621f8410f785;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=7bb43ebd-37a6-43f6-b7be-621f8410f785;path=/;SameSite=Strict;Secure;priority=high","JSESSIONID=E43830EDC4B7D8905D8EFD1B7CE2FE5F; Path=/; Secure; HttpOnly"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"DENY"}
+
+[debug] [2022-06-10T05:46:41.438Z] : Response Body : {"status":"failure","data":{"error_code":"INVALID_INPUT","message":"either the request body or parameters is in wrong format"}}
+
+[debug] [2022-06-10T05:46:41.443Z] : Unable to send debug log to server: HTTP Error: 400, either the request body or parameters is in wrong format
+[debug] [2022-06-10T05:46:42.884Z] : 
+[debug] [2022-06-10T05:46:42.887Z] : ----------------------------------------------------------------------
+[debug] [2022-06-10T05:46:42.888Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\kentc\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js run client:packageJson
+[debug] [2022-06-10T05:46:42.888Z] : CLI Version:  1.13.1
+[debug] [2022-06-10T05:46:42.889Z] : Platform:     win32
+[debug] [2022-06-10T05:46:42.889Z] : Node Version: v14.15.4
+[debug] [2022-06-10T05:46:42.891Z] : Time:         Fri Jun 10 2022 13:46:42 GMT+0800 (Philippine Standard Time)
+[debug] [2022-06-10T05:46:42.891Z] : ----------------------------------------------------------------------
+[debug] [2022-06-10T05:46:42.891Z] : 
+[debug] [2022-06-10T05:46:45.217Z] : > authorizing via signed-in user option
+[debug] [2022-06-10T05:46:45.218Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL"]
+[debug] [2022-06-10T05:46:45.248Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/8912000000029014 
+
+[debug] [2022-06-10T05:46:46.002Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 10 Jun 2022 05:46:45 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=04d9a2d1e2e86744f9516a3e9f805f56; Path=/","ZD_CSRF_TOKEN=20f025ef-d085-4934-a1ff-282e1029ac6f;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=20f025ef-d085-4934-a1ff-282e1029ac6f;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2022-06-10T05:46:46.009Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/8912000000029014/environment 
+
+[debug] [2022-06-10T05:46:46.659Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 10 Jun 2022 05:46:45 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=ba2a1b22f2a5e14b0d2647f7e38884fc; Path=/","ZD_CSRF_TOKEN=ba8b6b4c-8447-448c-90cd-b97792f76405;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=ba8b6b4c-8447-448c-90cd-b97792f76405;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[info] [2022-06-10T05:46:46.667Z] : 
+[info] [2022-06-10T05:46:46.669Z] : Executing packageJson script in C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3
+[debug] [2022-06-10T05:46:46.669Z] : Executing command > cd client && copy client-package.json build
+[info] [2022-06-10T05:46:46.670Z] : > cd client && copy client-package.json build
+[debug] [2022-06-10T05:46:46.772Z] : NO ERRORS REGISTERED
+[debug] [2022-06-10T05:46:46.774Z] : EXEC ENDED with event: run-script, message: success
+[debug] [2022-06-10T05:46:46.775Z] : TOTAL DURATION OF COMMAND EXEC : 1614
+[debug] [2022-06-10T05:46:46.805Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.com/baas/v1/cli/logs 
+<request body omitted>
+
+[debug] [2022-06-10T05:46:47.838Z] : <<<< HTTP RESPONSE : 400
+Response Headers: {"server":"ZGS","date":"Fri, 10 Jun 2022 05:46:47 GMT","content-type":"application/json;charset=ISO-8859-1","content-length":"127","connection":"close","set-cookie":["46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/","ZD_CSRF_TOKEN=de4a277f-62c0-4d7f-8f16-417f06f7b56c;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=de4a277f-62c0-4d7f-8f16-417f06f7b56c;path=/;SameSite=Strict;Secure;priority=high","JSESSIONID=3E8B1CE79F47CFD10D55F33F089CA7FB; Path=/; Secure; HttpOnly"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"DENY"}
+
+[debug] [2022-06-10T05:46:47.839Z] : Response Body : {"status":"failure","data":{"error_code":"INVALID_INPUT","message":"either the request body or parameters is in wrong format"}}
+
+[debug] [2022-06-10T05:46:47.843Z] : Unable to send debug log to server: HTTP Error: 400, either the request body or parameters is in wrong format
+[info] [2022-06-10T05:44:55.729Z] : 
+[info] [2022-06-10T05:44:55.732Z] : Executing preserve script in C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3
+[debug] [2022-06-10T05:44:55.733Z] : Executing command > catalyst run client:build && catalyst run client:packageJson
+[info] [2022-06-10T05:44:55.734Z] : > catalyst run client:build && catalyst run client:packageJson
+[debug] [2022-06-10T05:46:47.961Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/8912000000029014/function 
+Query params: {"type":"basicio,event,cron,applogic,integration"}
+
+[debug] [2022-06-10T05:46:48.012Z] : CatalystError: Module path does not exists
+    at C:\Users\kentc\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\optional-import.js:49:19
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\kentc\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\optional-import.js:28:58) {
+  status: 500,
+  exit: 1,
+  original: undefined,
+  context: undefined,
+  errorId: 'OPT-IMP-1',
+  arg: [
+    '\x1B[1mzcatalyst-cli-plugin-react\x1B[22m',
+    '\x1B[3m\x1B[31mC:\\Users\\kentc\\Desktop\\Work\\DiamondMinds\\OrionV3\\client\\build\\node_modules\\zcatalyst-cli-plugin-react\x1B[39m\x1B[23m',
+    '\x1B[1mclient/build\x1B[22m'
+  ],
+  skipHelp: false,
+  fileName: 'C:\\Users\\kentc\\AppData\\Roaming\\npm\\node_modules\\zcatalyst-cli\\lib\\optional-import'
+}
+[debug] [2022-06-10T05:46:49.182Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Fri, 10 Jun 2022 05:46:48 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=63dd9cf89a6678b816d9580ec827ee61; Path=/","ZD_CSRF_TOKEN=72c17237-e099-4771-b9ff-bf5a6d64d724;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=72c17237-e099-4771-b9ff-bf5a6d64d724;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2022-06-10T05:46:49.190Z] : unknown eol undefined hence skipping check
+[info] [2022-06-10T05:46:49.303Z] : i server[orion]: URL : http://localhost:3000/server/orion/
+[info] [2022-06-10T05:46:49.304Z] : 
+[debug] [2022-06-10T05:46:49.308Z] : CatalystError: Module path does not exists
+    at C:\Users\kentc\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\optional-import.js:49:19
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\kentc\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\optional-import.js:28:58) {
+  status: 500,
+  exit: 1,
+  original: undefined,
+  context: undefined,
+  errorId: 'OPT-IMP-1',
+  arg: [
+    '\x1B[1mzcatalyst-cli-plugin-react\x1B[22m',
+    '\x1B[3m\x1B[31mC:\\Users\\kentc\\Desktop\\Work\\DiamondMinds\\OrionV3\\client\\build\\node_modules\\zcatalyst-cli-plugin-react\x1B[39m\x1B[23m',
+    '\x1B[1mclient/build\x1B[22m'
+  ],
+  skipHelp: false,
+  fileName: 'C:\\Users\\kentc\\AppData\\Roaming\\npm\\node_modules\\zcatalyst-cli\\lib\\optional-import'
+}
+[info] [2022-06-10T05:46:49.615Z] : i client[react-app]: URL : http://localhost:3000/app/
+[error] [2022-06-10T05:46:56.467Z] : × Unable to serve the requested file: C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3\client\build\logo192.png
+[debug] [2022-06-10T05:46:56.468Z] : Error: ENOENT: no such file or directory, stat 'C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3\client\build\logo192.png'
+[error] [2022-06-10T05:56:11.722Z] : × Unable to serve the requested file: C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3\client\build\logo192.png
+[debug] [2022-06-10T05:56:11.723Z] : Error: ENOENT: no such file or directory, stat 'C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3\client\build\logo192.png'
+[info] [2022-06-10T06:12:22.956Z] : Shutting down server
+[debug] [2022-06-10T06:12:22.957Z] : client server closed
+[info] [2022-06-10T06:12:22.965Z] : 
+[info] [2022-06-10T06:12:22.967Z] : √ Shutdown complete
+[debug] [2022-06-10T06:12:22.977Z] : Error when fetching the help
+[debug] [2022-06-10T06:12:22.977Z] : No Help found for errorId: OPT-IMP-1
+[error] [2022-06-10T06:12:22.978Z] : × Module path does not exists
+[debug] [2022-06-10T06:12:22.979Z] : Error Stack: CatalystError: Module path does not exists
+    at C:\Users\kentc\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\optional-import.js:49:19
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\kentc\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\optional-import.js:28:58)
+[debug] [2022-06-10T06:12:22.979Z] : Error Status: 500
+[debug] [2022-06-10T06:12:22.981Z] : EXEC ENDED with event: serve, message: success
+[debug] [2022-06-10T06:12:22.982Z] : TOTAL DURATION OF COMMAND EXEC : 1654848
+[debug] [2022-06-10T06:12:23.041Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.com/baas/v1/cli/logs 
+<request body omitted>
+
+[debug] [2022-06-10T06:12:26.494Z] : <<<< HTTP RESPONSE : 400
+Response Headers: {"server":"ZGS","date":"Fri, 10 Jun 2022 06:12:25 GMT","content-type":"application/json;charset=ISO-8859-1","content-length":"127","connection":"close","set-cookie":["46512fd555=04d9a2d1e2e86744f9516a3e9f805f56; Path=/","ZD_CSRF_TOKEN=9c8647be-943a-41b0-8e1b-654b3f56eff2;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=9c8647be-943a-41b0-8e1b-654b3f56eff2;path=/;SameSite=Strict;Secure;priority=high","JSESSIONID=3C62D9B373F3D72D52267E558FFEA8DE; Path=/; Secure; HttpOnly"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"DENY"}
+
+[debug] [2022-06-10T06:12:26.497Z] : Response Body : {"status":"failure","data":{"error_code":"INVALID_INPUT","message":"either the request body or parameters is in wrong format"}}
+
+[debug] [2022-06-10T06:12:26.503Z] : Unable to send debug log to server: HTTP Error: 400, either the request body or parameters is in wrong format
+[debug] [2022-06-11T04:56:09.999Z] : 
+[debug] [2022-06-11T04:56:10.001Z] : ----------------------------------------------------------------------
+[debug] [2022-06-11T04:56:10.002Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\kentc\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js serve
+[debug] [2022-06-11T04:56:10.002Z] : CLI Version:  1.13.1
+[debug] [2022-06-11T04:56:10.003Z] : Platform:     win32
+[debug] [2022-06-11T04:56:10.003Z] : Node Version: v14.15.4
+[debug] [2022-06-11T04:56:10.012Z] : Time:         Sat Jun 11 2022 12:56:10 GMT+0800 (Philippine Standard Time)
+[debug] [2022-06-11T04:56:10.013Z] : ----------------------------------------------------------------------
+[debug] [2022-06-11T04:56:10.013Z] : 
+[debug] [2022-06-11T04:56:13.011Z] : > authorizing via signed-in user option
+[debug] [2022-06-11T04:56:13.012Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL"]
+[debug] [2022-06-11T04:56:13.034Z] : > refreshing access token <
+[debug] [2022-06-11T04:56:13.036Z] : >>>> HTTP REQUEST : POST https://accounts.zoho.com/oauth/v2/token 
+<request body omitted>
+
+[debug] [2022-06-11T04:56:13.807Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Sat, 11 Jun 2022 04:56:12 GMT","content-type":"application/json;charset=UTF-8","content-length":"169","connection":"close","set-cookie":["b266a5bf57=57c7a14afabcac9a0b9dfc64b3542b70; Path=/","iamcsr=c3fc1319-0820-430a-addf-ab4473447933;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=c3fc1319-0820-430a-addf-ab4473447933;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"SAMEORIGIN","content-language":"en-US","strict-transport-security":"max-age=63072000"}
+
+[debug] [2022-06-11T04:56:13.824Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/8912000000029014 
+
+[debug] [2022-06-11T04:56:16.180Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Sat, 11 Jun 2022 04:56:15 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=04d9a2d1e2e86744f9516a3e9f805f56; Path=/","ZD_CSRF_TOKEN=e37201ad-24f1-4290-85bf-3ace1533ee6f;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=e37201ad-24f1-4290-85bf-3ace1533ee6f;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2022-06-11T04:56:16.183Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/8912000000029014/environment 
+
+[debug] [2022-06-11T04:56:16.830Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Sat, 11 Jun 2022 04:56:15 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/","ZD_CSRF_TOKEN=4af0de2f-95c6-4605-8322-8d5e09fd7971;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=4af0de2f-95c6-4605-8322-8d5e09fd7971;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2022-06-11T04:56:18.274Z] : 
+[debug] [2022-06-11T04:56:18.276Z] : ----------------------------------------------------------------------
+[debug] [2022-06-11T04:56:18.277Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\kentc\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js run client:build
+[debug] [2022-06-11T04:56:18.277Z] : CLI Version:  1.13.1
+[debug] [2022-06-11T04:56:18.278Z] : Platform:     win32
+[debug] [2022-06-11T04:56:18.278Z] : Node Version: v14.15.4
+[debug] [2022-06-11T04:56:18.280Z] : Time:         Sat Jun 11 2022 12:56:18 GMT+0800 (Philippine Standard Time)
+[debug] [2022-06-11T04:56:18.280Z] : ----------------------------------------------------------------------
+[debug] [2022-06-11T04:56:18.280Z] : 
+[debug] [2022-06-11T04:56:20.196Z] : > authorizing via signed-in user option
+[debug] [2022-06-11T04:56:20.197Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL"]
+[debug] [2022-06-11T04:56:20.218Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/8912000000029014 
+
+[debug] [2022-06-11T04:56:20.923Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Sat, 11 Jun 2022 04:56:19 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=04d9a2d1e2e86744f9516a3e9f805f56; Path=/","ZD_CSRF_TOKEN=610cf327-4812-4a19-aa11-92f0c4aa74c3;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=610cf327-4812-4a19-aa11-92f0c4aa74c3;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2022-06-11T04:56:20.928Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/8912000000029014/environment 
+
+[debug] [2022-06-11T04:56:21.548Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Sat, 11 Jun 2022 04:56:20 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/","ZD_CSRF_TOKEN=2e112167-d620-4426-a7cc-37724b4f0e96;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=2e112167-d620-4426-a7cc-37724b4f0e96;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[info] [2022-06-11T04:56:21.557Z] : 
+[info] [2022-06-11T04:56:21.558Z] : Executing build script in C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3
+[debug] [2022-06-11T04:56:21.559Z] : Executing command > cd client && npm install && npm run build
+[info] [2022-06-11T04:56:21.559Z] : > cd client && npm install && npm run build
+[debug] [2022-06-11T04:57:44.485Z] : NO ERRORS REGISTERED
+[debug] [2022-06-11T04:57:44.486Z] : EXEC ENDED with event: run-script, message: success
+[debug] [2022-06-11T04:57:44.486Z] : TOTAL DURATION OF COMMAND EXEC : 84345
+[debug] [2022-06-11T04:57:44.570Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.com/baas/v1/cli/logs 
+<request body omitted>
+
+[debug] [2022-06-11T04:57:46.286Z] : <<<< HTTP RESPONSE : 400
+Response Headers: {"server":"ZGS","date":"Sat, 11 Jun 2022 04:57:45 GMT","content-type":"application/json;charset=ISO-8859-1","content-length":"147","connection":"close","set-cookie":["46512fd555=ba2a1b22f2a5e14b0d2647f7e38884fc; Path=/","ZD_CSRF_TOKEN=3a36be87-0277-4f29-8022-d344948b462b;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=3a36be87-0277-4f29-8022-d344948b462b;path=/;SameSite=Strict;Secure;priority=high","JSESSIONID=C0B8098FA3DA1525476C5C605538A8DA; Path=/; Secure; HttpOnly"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"DENY"}
+
+[debug] [2022-06-11T04:57:46.287Z] : Response Body : {"status":"failure","data":{"error_code":"INPUT_SIZE_MORE_THAN_ALLOWED","message":"Please check if the size of the input is in the correct range"}}
+
+[debug] [2022-06-11T04:57:46.344Z] : Unable to send debug log to server: HTTP Error: 400, Please check if the size of the input is in the correct range
+[debug] [2022-06-11T04:57:47.993Z] : 
+[debug] [2022-06-11T04:57:47.995Z] : ----------------------------------------------------------------------
+[debug] [2022-06-11T04:57:47.996Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\kentc\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js run client:packageJson
+[debug] [2022-06-11T04:57:47.997Z] : CLI Version:  1.13.1
+[debug] [2022-06-11T04:57:47.999Z] : Platform:     win32
+[debug] [2022-06-11T04:57:48.000Z] : Node Version: v14.15.4
+[debug] [2022-06-11T04:57:48.001Z] : Time:         Sat Jun 11 2022 12:57:48 GMT+0800 (Philippine Standard Time)
+[debug] [2022-06-11T04:57:48.002Z] : ----------------------------------------------------------------------
+[debug] [2022-06-11T04:57:48.002Z] : 
+[debug] [2022-06-11T04:57:50.413Z] : > authorizing via signed-in user option
+[debug] [2022-06-11T04:57:50.414Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL"]
+[debug] [2022-06-11T04:57:50.443Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/8912000000029014 
+
+[debug] [2022-06-11T04:57:51.783Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Sat, 11 Jun 2022 04:57:50 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=63dd9cf89a6678b816d9580ec827ee61; Path=/","ZD_CSRF_TOKEN=8bda73a0-6576-415b-85fd-96f24cc666dd;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=8bda73a0-6576-415b-85fd-96f24cc666dd;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2022-06-11T04:57:51.797Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/8912000000029014/environment 
+
+[debug] [2022-06-11T04:57:53.319Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Sat, 11 Jun 2022 04:57:52 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=04d9a2d1e2e86744f9516a3e9f805f56; Path=/","ZD_CSRF_TOKEN=a842c502-79ca-4c64-b582-9fe5492f99cb;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=a842c502-79ca-4c64-b582-9fe5492f99cb;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[info] [2022-06-11T04:57:53.324Z] : 
+[info] [2022-06-11T04:57:53.325Z] : Executing packageJson script in C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3
+[debug] [2022-06-11T04:57:53.325Z] : Executing command > cd client && copy client-package.json build
+[info] [2022-06-11T04:57:53.326Z] : > cd client && copy client-package.json build
+[debug] [2022-06-11T04:57:53.965Z] : NO ERRORS REGISTERED
+[debug] [2022-06-11T04:57:53.967Z] : EXEC ENDED with event: run-script, message: success
+[debug] [2022-06-11T04:57:53.967Z] : TOTAL DURATION OF COMMAND EXEC : 3622
+[debug] [2022-06-11T04:57:54.014Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.com/baas/v1/cli/logs 
+<request body omitted>
+
+[debug] [2022-06-11T04:57:55.227Z] : <<<< HTTP RESPONSE : 400
+Response Headers: {"server":"ZGS","date":"Sat, 11 Jun 2022 04:57:54 GMT","content-type":"application/json;charset=ISO-8859-1","content-length":"147","connection":"close","set-cookie":["46512fd555=ba2a1b22f2a5e14b0d2647f7e38884fc; Path=/","ZD_CSRF_TOKEN=ff6f7373-f23a-4ecb-95ef-2480925a1d15;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=ff6f7373-f23a-4ecb-95ef-2480925a1d15;path=/;SameSite=Strict;Secure;priority=high","JSESSIONID=948CAFD10827CD27B75E4265D3BE3FEB; Path=/; Secure; HttpOnly"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"DENY"}
+
+[debug] [2022-06-11T04:57:55.228Z] : Response Body : {"status":"failure","data":{"error_code":"INPUT_SIZE_MORE_THAN_ALLOWED","message":"Please check if the size of the input is in the correct range"}}
+
+[debug] [2022-06-11T04:57:55.230Z] : Unable to send debug log to server: HTTP Error: 400, Please check if the size of the input is in the correct range
+[info] [2022-06-11T04:56:17.305Z] : 
+[info] [2022-06-11T04:56:17.307Z] : Executing preserve script in C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3
+[debug] [2022-06-11T04:56:17.307Z] : Executing command > catalyst run client:build && catalyst run client:packageJson
+[info] [2022-06-11T04:56:17.308Z] : > catalyst run client:build && catalyst run client:packageJson
+[debug] [2022-06-11T04:57:55.335Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/8912000000029014/function 
+Query params: {"type":"basicio,event,cron,applogic,integration"}
+
+[debug] [2022-06-11T04:57:55.414Z] : CatalystError: Module path does not exists
+    at C:\Users\kentc\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\optional-import.js:49:19
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\kentc\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\optional-import.js:28:58) {
+  status: 500,
+  exit: 1,
+  original: undefined,
+  context: undefined,
+  errorId: 'OPT-IMP-1',
+  arg: [
+    '\x1B[1mzcatalyst-cli-plugin-react\x1B[22m',
+    '\x1B[3m\x1B[31mC:\\Users\\kentc\\Desktop\\Work\\DiamondMinds\\OrionV3\\client\\build\\node_modules\\zcatalyst-cli-plugin-react\x1B[39m\x1B[23m',
+    '\x1B[1mclient/build\x1B[22m'
+  ],
+  skipHelp: false,
+  fileName: 'C:\\Users\\kentc\\AppData\\Roaming\\npm\\node_modules\\zcatalyst-cli\\lib\\optional-import'
+}
+[debug] [2022-06-11T04:57:56.103Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Sat, 11 Jun 2022 04:57:54 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=ba2a1b22f2a5e14b0d2647f7e38884fc; Path=/","ZD_CSRF_TOKEN=8f283e76-9266-45f1-9c45-4f862108340f;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=8f283e76-9266-45f1-9c45-4f862108340f;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2022-06-11T04:57:56.109Z] : unknown eol undefined hence skipping check
+[info] [2022-06-11T04:57:56.215Z] : i server[orion]: URL : http://localhost:3000/server/orion/
+[info] [2022-06-11T04:57:56.216Z] : 
+[debug] [2022-06-11T04:57:56.220Z] : CatalystError: Module path does not exists
+    at C:\Users\kentc\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\optional-import.js:49:19
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\kentc\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\optional-import.js:28:58) {
+  status: 500,
+  exit: 1,
+  original: undefined,
+  context: undefined,
+  errorId: 'OPT-IMP-1',
+  arg: [
+    '\x1B[1mzcatalyst-cli-plugin-react\x1B[22m',
+    '\x1B[3m\x1B[31mC:\\Users\\kentc\\Desktop\\Work\\DiamondMinds\\OrionV3\\client\\build\\node_modules\\zcatalyst-cli-plugin-react\x1B[39m\x1B[23m',
+    '\x1B[1mclient/build\x1B[22m'
+  ],
+  skipHelp: false,
+  fileName: 'C:\\Users\\kentc\\AppData\\Roaming\\npm\\node_modules\\zcatalyst-cli\\lib\\optional-import'
+}
+[info] [2022-06-11T04:57:56.498Z] : i client[react-app]: URL : http://localhost:3000/app/
+[error] [2022-06-11T04:58:02.701Z] : × Unable to serve the requested file: C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3\client\build\logo192.png
+[debug] [2022-06-11T04:58:02.701Z] : Error: ENOENT: no such file or directory, stat 'C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3\client\build\logo192.png'
+[error] [2022-06-11T04:58:13.612Z] : × Unable to serve the requested file: C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3\client\build\addCandidate
+[debug] [2022-06-11T04:58:13.614Z] : Error: ENOENT: no such file or directory, stat 'C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3\client\build\addCandidate'
+[error] [2022-06-11T04:58:20.137Z] : × Unable to serve the requested file: C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3\client\build\logo192.png
+[debug] [2022-06-11T04:58:20.139Z] : Error: ENOENT: no such file or directory, stat 'C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3\client\build\logo192.png'
+[error] [2022-06-11T04:58:33.660Z] : × Unable to serve the requested file: C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3\client\build\logo192.png
+[debug] [2022-06-11T04:58:33.660Z] : Error: ENOENT: no such file or directory, stat 'C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3\client\build\logo192.png'
+[error] [2022-06-11T05:00:13.716Z] : × Unable to serve the requested file: C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3\client\build\addCandidate
+[debug] [2022-06-11T05:00:13.717Z] : Error: ENOENT: no such file or directory, stat 'C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3\client\build\addCandidate'
+[error] [2022-06-11T05:00:20.689Z] : × Unable to serve the requested file: C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3\client\build\logo192.png
+[debug] [2022-06-11T05:00:20.689Z] : Error: ENOENT: no such file or directory, stat 'C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3\client\build\logo192.png'
+[info] [2022-06-11T05:03:19.478Z] : Shutting down server
+[debug] [2022-06-11T05:03:19.479Z] : client server closed
+[info] [2022-06-11T05:03:19.485Z] : 
+[info] [2022-06-11T05:03:19.486Z] : √ Shutdown complete
+[debug] [2022-06-11T05:03:19.493Z] : Error when fetching the help
+[debug] [2022-06-11T05:03:19.493Z] : No Help found for errorId: OPT-IMP-1
+[error] [2022-06-11T05:03:19.494Z] : × Module path does not exists
+[debug] [2022-06-11T05:03:19.495Z] : Error Stack: CatalystError: Module path does not exists
+    at C:\Users\kentc\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\optional-import.js:49:19
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\kentc\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\optional-import.js:28:58)
+[debug] [2022-06-11T05:03:19.495Z] : Error Status: 500
+[debug] [2022-06-11T05:03:19.498Z] : EXEC ENDED with event: serve, message: success
+[debug] [2022-06-11T05:03:19.498Z] : TOTAL DURATION OF COMMAND EXEC : 426532
+[debug] [2022-06-11T05:03:19.531Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.com/baas/v1/cli/logs 
+<request body omitted>
+
+[debug] [2022-06-11T05:03:20.694Z] : <<<< HTTP RESPONSE : 400
+Response Headers: {"server":"ZGS","date":"Sat, 11 Jun 2022 05:03:19 GMT","content-type":"application/json;charset=ISO-8859-1","content-length":"147","connection":"close","set-cookie":["46512fd555=63dd9cf89a6678b816d9580ec827ee61; Path=/","ZD_CSRF_TOKEN=fa79eaf1-0bc5-409b-969d-408249448b94;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=fa79eaf1-0bc5-409b-969d-408249448b94;path=/;SameSite=Strict;Secure;priority=high","JSESSIONID=407C7ED08BD77020486D49ED86869AAC; Path=/; Secure; HttpOnly"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"DENY"}
+
+[debug] [2022-06-11T05:03:20.694Z] : Response Body : {"status":"failure","data":{"error_code":"INPUT_SIZE_MORE_THAN_ALLOWED","message":"Please check if the size of the input is in the correct range"}}
+
+[debug] [2022-06-11T05:03:20.698Z] : Unable to send debug log to server: HTTP Error: 400, Please check if the size of the input is in the correct range
+[debug] [2022-06-11T05:03:25.922Z] : 
+[debug] [2022-06-11T05:03:25.924Z] : ----------------------------------------------------------------------
+[debug] [2022-06-11T05:03:25.924Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\kentc\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js serve
+[debug] [2022-06-11T05:03:25.925Z] : CLI Version:  1.13.1
+[debug] [2022-06-11T05:03:25.925Z] : Platform:     win32
+[debug] [2022-06-11T05:03:25.925Z] : Node Version: v14.15.4
+[debug] [2022-06-11T05:03:25.928Z] : Time:         Sat Jun 11 2022 13:03:25 GMT+0800 (Philippine Standard Time)
+[debug] [2022-06-11T05:03:25.929Z] : ----------------------------------------------------------------------
+[debug] [2022-06-11T05:03:25.929Z] : 
+[debug] [2022-06-11T05:03:28.680Z] : > authorizing via signed-in user option
+[debug] [2022-06-11T05:03:28.681Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL"]
+[debug] [2022-06-11T05:03:28.705Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/8912000000029014 
+
+[debug] [2022-06-11T05:03:29.417Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Sat, 11 Jun 2022 05:03:28 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=63dd9cf89a6678b816d9580ec827ee61; Path=/","ZD_CSRF_TOKEN=4d33cfe2-2832-488b-b02b-d58552d37643;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=4d33cfe2-2832-488b-b02b-d58552d37643;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2022-06-11T05:03:29.422Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/8912000000029014/environment 
+
+[debug] [2022-06-11T05:03:30.055Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Sat, 11 Jun 2022 05:03:28 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/","ZD_CSRF_TOKEN=0e9e2627-e945-4da5-aab1-5983c0df8baf;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=0e9e2627-e945-4da5-aab1-5983c0df8baf;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2022-06-11T05:03:31.211Z] : 
+[debug] [2022-06-11T05:03:31.213Z] : ----------------------------------------------------------------------
+[debug] [2022-06-11T05:03:31.214Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\kentc\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js run client:build
+[debug] [2022-06-11T05:03:31.214Z] : CLI Version:  1.13.1
+[debug] [2022-06-11T05:03:31.214Z] : Platform:     win32
+[debug] [2022-06-11T05:03:31.214Z] : Node Version: v14.15.4
+[debug] [2022-06-11T05:03:31.216Z] : Time:         Sat Jun 11 2022 13:03:31 GMT+0800 (Philippine Standard Time)
+[debug] [2022-06-11T05:03:31.216Z] : ----------------------------------------------------------------------
+[debug] [2022-06-11T05:03:31.217Z] : 
+[debug] [2022-06-11T05:03:32.755Z] : > authorizing via signed-in user option
+[debug] [2022-06-11T05:03:32.756Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL"]
+[debug] [2022-06-11T05:03:32.776Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/8912000000029014 
+
+[debug] [2022-06-11T05:03:33.460Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Sat, 11 Jun 2022 05:03:32 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/","ZD_CSRF_TOKEN=eb450f21-02d3-4f95-8c91-c62ebc1229b8;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=eb450f21-02d3-4f95-8c91-c62ebc1229b8;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2022-06-11T05:03:33.466Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/8912000000029014/environment 
+
+[debug] [2022-06-11T05:03:34.121Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Sat, 11 Jun 2022 05:03:32 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=ba2a1b22f2a5e14b0d2647f7e38884fc; Path=/","ZD_CSRF_TOKEN=d0d988fd-5dea-43dd-9118-825e0648a63c;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=d0d988fd-5dea-43dd-9118-825e0648a63c;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[info] [2022-06-11T05:03:34.127Z] : 
+[info] [2022-06-11T05:03:34.128Z] : Executing build script in C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3
+[debug] [2022-06-11T05:03:34.128Z] : Executing command > cd client && npm install && npm run build
+[info] [2022-06-11T05:03:34.129Z] : > cd client && npm install && npm run build
+[debug] [2022-06-11T05:04:46.346Z] : NO ERRORS REGISTERED
+[debug] [2022-06-11T05:04:46.347Z] : EXEC ENDED with event: run-script, message: success
+[debug] [2022-06-11T05:04:46.347Z] : TOTAL DURATION OF COMMAND EXEC : 73651
+[debug] [2022-06-11T05:04:46.410Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.com/baas/v1/cli/logs 
+<request body omitted>
+
+[debug] [2022-06-11T05:04:47.674Z] : <<<< HTTP RESPONSE : 400
+Response Headers: {"server":"ZGS","date":"Sat, 11 Jun 2022 05:04:46 GMT","content-type":"application/json;charset=ISO-8859-1","content-length":"147","connection":"close","set-cookie":["46512fd555=63dd9cf89a6678b816d9580ec827ee61; Path=/","ZD_CSRF_TOKEN=3bd71f3a-2111-4200-9633-851650b6d87f;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=3bd71f3a-2111-4200-9633-851650b6d87f;path=/;SameSite=Strict;Secure;priority=high","JSESSIONID=F345E2043B66BEAA798E83C2158D349C; Path=/; Secure; HttpOnly"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"DENY"}
+
+[debug] [2022-06-11T05:04:47.676Z] : Response Body : {"status":"failure","data":{"error_code":"INPUT_SIZE_MORE_THAN_ALLOWED","message":"Please check if the size of the input is in the correct range"}}
+
+[debug] [2022-06-11T05:04:47.680Z] : Unable to send debug log to server: HTTP Error: 400, Please check if the size of the input is in the correct range
+[debug] [2022-06-11T05:04:48.797Z] : 
+[debug] [2022-06-11T05:04:48.799Z] : ----------------------------------------------------------------------
+[debug] [2022-06-11T05:04:48.800Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\kentc\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js run client:packageJson
+[debug] [2022-06-11T05:04:48.800Z] : CLI Version:  1.13.1
+[debug] [2022-06-11T05:04:48.800Z] : Platform:     win32
+[debug] [2022-06-11T05:04:48.801Z] : Node Version: v14.15.4
+[debug] [2022-06-11T05:04:48.802Z] : Time:         Sat Jun 11 2022 13:04:48 GMT+0800 (Philippine Standard Time)
+[debug] [2022-06-11T05:04:48.803Z] : ----------------------------------------------------------------------
+[debug] [2022-06-11T05:04:48.803Z] : 
+[debug] [2022-06-11T05:04:52.571Z] : > authorizing via signed-in user option
+[debug] [2022-06-11T05:04:52.572Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL"]
+[debug] [2022-06-11T05:04:52.593Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/8912000000029014 
+
+[debug] [2022-06-11T05:04:53.306Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Sat, 11 Jun 2022 05:04:52 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/","ZD_CSRF_TOKEN=3de14ed1-f362-47d9-995b-36996df1bc64;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=3de14ed1-f362-47d9-995b-36996df1bc64;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2022-06-11T05:04:53.314Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/8912000000029014/environment 
+
+[debug] [2022-06-11T05:04:54.241Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Sat, 11 Jun 2022 05:04:52 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=04d9a2d1e2e86744f9516a3e9f805f56; Path=/","ZD_CSRF_TOKEN=488b3a6f-a000-46bb-92e6-03076f372f6e;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=488b3a6f-a000-46bb-92e6-03076f372f6e;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[info] [2022-06-11T05:04:54.247Z] : 
+[info] [2022-06-11T05:04:54.248Z] : Executing packageJson script in C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3
+[debug] [2022-06-11T05:04:54.249Z] : Executing command > cd client && copy client-package.json build
+[info] [2022-06-11T05:04:54.250Z] : > cd client && copy client-package.json build
+[debug] [2022-06-11T05:04:54.318Z] : NO ERRORS REGISTERED
+[debug] [2022-06-11T05:04:54.319Z] : EXEC ENDED with event: run-script, message: success
+[debug] [2022-06-11T05:04:54.319Z] : TOTAL DURATION OF COMMAND EXEC : 1804
+[debug] [2022-06-11T05:04:54.348Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.com/baas/v1/cli/logs 
+<request body omitted>
+
+[debug] [2022-06-11T05:04:55.596Z] : <<<< HTTP RESPONSE : 400
+Response Headers: {"server":"ZGS","date":"Sat, 11 Jun 2022 05:04:54 GMT","content-type":"application/json;charset=ISO-8859-1","content-length":"147","connection":"close","set-cookie":["46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/","ZD_CSRF_TOKEN=83377a26-fd45-46d2-9791-085454217789;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=83377a26-fd45-46d2-9791-085454217789;path=/;SameSite=Strict;Secure;priority=high","JSESSIONID=3134EF1B84276A14DAB7EC21BDABF4FA; Path=/; Secure; HttpOnly"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"DENY"}
+
+[debug] [2022-06-11T05:04:55.597Z] : Response Body : {"status":"failure","data":{"error_code":"INPUT_SIZE_MORE_THAN_ALLOWED","message":"Please check if the size of the input is in the correct range"}}
+
+[debug] [2022-06-11T05:04:55.602Z] : Unable to send debug log to server: HTTP Error: 400, Please check if the size of the input is in the correct range
+[info] [2022-06-11T05:03:30.463Z] : 
+[info] [2022-06-11T05:03:30.464Z] : Executing preserve script in C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3
+[debug] [2022-06-11T05:03:30.464Z] : Executing command > catalyst run client:build && catalyst run client:packageJson
+[info] [2022-06-11T05:03:30.465Z] : > catalyst run client:build && catalyst run client:packageJson
+[debug] [2022-06-11T05:04:55.658Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/8912000000029014/function 
+Query params: {"type":"basicio,event,cron,applogic,integration"}
+
+[debug] [2022-06-11T05:04:55.698Z] : CatalystError: Module path does not exists
+    at C:\Users\kentc\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\optional-import.js:49:19
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\kentc\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\optional-import.js:28:58) {
+  status: 500,
+  exit: 1,
+  original: undefined,
+  context: undefined,
+  errorId: 'OPT-IMP-1',
+  arg: [
+    '\x1B[1mzcatalyst-cli-plugin-react\x1B[22m',
+    '\x1B[3m\x1B[31mC:\\Users\\kentc\\Desktop\\Work\\DiamondMinds\\OrionV3\\client\\build\\node_modules\\zcatalyst-cli-plugin-react\x1B[39m\x1B[23m',
+    '\x1B[1mclient/build\x1B[22m'
+  ],
+  skipHelp: false,
+  fileName: 'C:\\Users\\kentc\\AppData\\Roaming\\npm\\node_modules\\zcatalyst-cli\\lib\\optional-import'
+}
+[debug] [2022-06-11T05:04:57.651Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Sat, 11 Jun 2022 05:04:56 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=04d9a2d1e2e86744f9516a3e9f805f56; Path=/","ZD_CSRF_TOKEN=b280c12e-fdf2-4e0e-a92d-923db697a04c;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=b280c12e-fdf2-4e0e-a92d-923db697a04c;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2022-06-11T05:04:57.656Z] : unknown eol undefined hence skipping check
+[info] [2022-06-11T05:04:57.745Z] : i server[orion]: URL : http://localhost:3000/server/orion/
+[info] [2022-06-11T05:04:57.745Z] : 
+[debug] [2022-06-11T05:04:57.750Z] : CatalystError: Module path does not exists
+    at C:\Users\kentc\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\optional-import.js:49:19
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\kentc\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\optional-import.js:28:58) {
+  status: 500,
+  exit: 1,
+  original: undefined,
+  context: undefined,
+  errorId: 'OPT-IMP-1',
+  arg: [
+    '\x1B[1mzcatalyst-cli-plugin-react\x1B[22m',
+    '\x1B[3m\x1B[31mC:\\Users\\kentc\\Desktop\\Work\\DiamondMinds\\OrionV3\\client\\build\\node_modules\\zcatalyst-cli-plugin-react\x1B[39m\x1B[23m',
+    '\x1B[1mclient/build\x1B[22m'
+  ],
+  skipHelp: false,
+  fileName: 'C:\\Users\\kentc\\AppData\\Roaming\\npm\\node_modules\\zcatalyst-cli\\lib\\optional-import'
+}
+[info] [2022-06-11T05:04:58.025Z] : i client[react-app]: URL : http://localhost:3000/app/
+[error] [2022-06-11T05:05:01.933Z] : × Unable to serve the requested file: C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3\client\build\logo192.png
+[debug] [2022-06-11T05:05:01.975Z] : Error: ENOENT: no such file or directory, stat 'C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3\client\build\logo192.png'
+[error] [2022-06-11T05:05:19.169Z] : × Unable to serve the requested file: C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3\client\build\addCandidate
+[debug] [2022-06-11T05:05:19.169Z] : Error: ENOENT: no such file or directory, stat 'C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3\client\build\addCandidate'
+[error] [2022-06-11T05:05:49.965Z] : × Unable to serve the requested file: C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3\client\build\logo192.png
+[debug] [2022-06-11T05:05:49.966Z] : Error: ENOENT: no such file or directory, stat 'C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3\client\build\logo192.png'
+[debug] [2022-06-11T06:24:24.007Z] : > refreshing access token <
+[debug] [2022-06-11T06:24:24.017Z] : >>>> HTTP REQUEST : POST https://accounts.zoho.com/oauth/v2/token 
+<request body omitted>
+
+[debug] [2022-06-11T06:24:24.722Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Sat, 11 Jun 2022 06:24:23 GMT","content-type":"application/json;charset=UTF-8","content-length":"169","connection":"close","set-cookie":["b266a5bf57=57c7a14afabcac9a0b9dfc64b3542b70; Path=/","iamcsr=65ef0143-aef7-4027-a892-e9e6c30de8c3;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=65ef0143-aef7-4027-a892-e9e6c30de8c3;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"SAMEORIGIN","content-language":"en-US","strict-transport-security":"max-age=63072000"}
+
+[error] [2022-06-11T06:24:26.146Z] : × Unable to serve the requested file: C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3\client\build\logo192.png
+[debug] [2022-06-11T06:24:26.148Z] : Error: ENOENT: no such file or directory, stat 'C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3\client\build\logo192.png'
+[error] [2022-06-11T06:32:30.748Z] : × Unable to serve the requested file: C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3\client\build\requisition
+[debug] [2022-06-11T06:32:30.749Z] : Error: ENOENT: no such file or directory, stat 'C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3\client\build\requisition'
+[error] [2022-06-11T06:32:43.774Z] : × Unable to serve the requested file: C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3\client\build\logo192.png
+[debug] [2022-06-11T06:32:43.776Z] : Error: ENOENT: no such file or directory, stat 'C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3\client\build\logo192.png'
+[error] [2022-06-11T06:33:05.637Z] : × Unable to serve the requested file: C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3\client\build\requisition
+[debug] [2022-06-11T06:33:05.637Z] : Error: ENOENT: no such file or directory, stat 'C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3\client\build\requisition'
+[info] [2022-06-11T06:33:13.765Z] : Shutting down server
+[debug] [2022-06-11T06:33:13.767Z] : client server closed
+[info] [2022-06-11T06:33:13.798Z] : 
+[info] [2022-06-11T06:33:13.801Z] : √ Shutdown complete
+[debug] [2022-06-11T06:33:13.831Z] : Error when fetching the help
+[debug] [2022-06-11T06:33:13.831Z] : No Help found for errorId: OPT-IMP-1
+[error] [2022-06-11T06:33:13.834Z] : × Module path does not exists
+[debug] [2022-06-11T06:33:13.835Z] : Error Stack: CatalystError: Module path does not exists
+    at C:\Users\kentc\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\optional-import.js:49:19
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\kentc\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\optional-import.js:28:58)
+[debug] [2022-06-11T06:33:13.835Z] : Error Status: 500
+[debug] [2022-06-11T06:33:13.840Z] : EXEC ENDED with event: serve, message: success
+[debug] [2022-06-11T06:33:13.840Z] : TOTAL DURATION OF COMMAND EXEC : 5385182
+[debug] [2022-06-11T06:33:13.879Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.com/baas/v1/cli/logs 
+<request body omitted>
+
+[debug] [2022-06-11T06:33:16.842Z] : <<<< HTTP RESPONSE : 400
+Response Headers: {"server":"ZGS","date":"Sat, 11 Jun 2022 06:33:15 GMT","content-type":"application/json;charset=ISO-8859-1","content-length":"147","connection":"close","set-cookie":["46512fd555=63dd9cf89a6678b816d9580ec827ee61; Path=/","ZD_CSRF_TOKEN=edba5315-b0d4-4e6a-9444-02fc93a72042;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=edba5315-b0d4-4e6a-9444-02fc93a72042;path=/;SameSite=Strict;Secure;priority=high","JSESSIONID=D46B5E7B20C60E070BA061699AA84C92; Path=/; Secure; HttpOnly"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"DENY"}
+
+[debug] [2022-06-11T06:33:16.843Z] : Response Body : {"status":"failure","data":{"error_code":"INPUT_SIZE_MORE_THAN_ALLOWED","message":"Please check if the size of the input is in the correct range"}}
+
+[debug] [2022-06-11T06:33:16.849Z] : Unable to send debug log to server: HTTP Error: 400, Please check if the size of the input is in the correct range
+[debug] [2022-06-11T06:34:15.737Z] : 
+[debug] [2022-06-11T06:34:15.739Z] : ----------------------------------------------------------------------
+[debug] [2022-06-11T06:34:15.740Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\kentc\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js serve
+[debug] [2022-06-11T06:34:15.740Z] : CLI Version:  1.13.1
+[debug] [2022-06-11T06:34:15.740Z] : Platform:     win32
+[debug] [2022-06-11T06:34:15.741Z] : Node Version: v14.15.4
+[debug] [2022-06-11T06:34:15.750Z] : Time:         Sat Jun 11 2022 14:34:15 GMT+0800 (Philippine Standard Time)
+[debug] [2022-06-11T06:34:15.751Z] : ----------------------------------------------------------------------
+[debug] [2022-06-11T06:34:15.751Z] : 
+[debug] [2022-06-11T06:34:18.263Z] : > authorizing via signed-in user option
+[debug] [2022-06-11T06:34:18.264Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL"]
+[debug] [2022-06-11T06:34:18.286Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/8912000000029014 
+
+[debug] [2022-06-11T06:34:19.036Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Sat, 11 Jun 2022 06:34:17 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/","ZD_CSRF_TOKEN=2c24b60e-0170-4e4c-bc09-0e00c915f33e;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=2c24b60e-0170-4e4c-bc09-0e00c915f33e;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2022-06-11T06:34:19.043Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/8912000000029014/environment 
+
+[debug] [2022-06-11T06:34:19.670Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Sat, 11 Jun 2022 06:34:18 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=04d9a2d1e2e86744f9516a3e9f805f56; Path=/","ZD_CSRF_TOKEN=e2acd378-e746-4b3f-8ffb-c7b178109fd0;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=e2acd378-e746-4b3f-8ffb-c7b178109fd0;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2022-06-11T06:34:21.059Z] : 
+[debug] [2022-06-11T06:34:21.060Z] : ----------------------------------------------------------------------
+[debug] [2022-06-11T06:34:21.061Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\kentc\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js run client:build
+[debug] [2022-06-11T06:34:21.061Z] : CLI Version:  1.13.1
+[debug] [2022-06-11T06:34:21.062Z] : Platform:     win32
+[debug] [2022-06-11T06:34:21.062Z] : Node Version: v14.15.4
+[debug] [2022-06-11T06:34:21.064Z] : Time:         Sat Jun 11 2022 14:34:21 GMT+0800 (Philippine Standard Time)
+[debug] [2022-06-11T06:34:21.064Z] : ----------------------------------------------------------------------
+[debug] [2022-06-11T06:34:21.064Z] : 
+[debug] [2022-06-11T06:34:22.832Z] : > authorizing via signed-in user option
+[debug] [2022-06-11T06:34:22.833Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL"]
+[debug] [2022-06-11T06:34:22.853Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/8912000000029014 
+
+[debug] [2022-06-11T06:34:23.526Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Sat, 11 Jun 2022 06:34:22 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/","ZD_CSRF_TOKEN=cd533a04-8677-4d31-952a-b4e724fc0772;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=cd533a04-8677-4d31-952a-b4e724fc0772;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2022-06-11T06:34:23.532Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/8912000000029014/environment 
+
+[debug] [2022-06-11T06:34:24.204Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Sat, 11 Jun 2022 06:34:23 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/","ZD_CSRF_TOKEN=dc361a73-c3b7-4d8d-aee1-dab97dba0dfd;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=dc361a73-c3b7-4d8d-aee1-dab97dba0dfd;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[info] [2022-06-11T06:34:24.209Z] : 
+[info] [2022-06-11T06:34:24.210Z] : Executing build script in C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3
+[debug] [2022-06-11T06:34:24.210Z] : Executing command > cd client && npm install && npm run build
+[info] [2022-06-11T06:34:24.211Z] : > cd client && npm install && npm run build
+[debug] [2022-06-11T06:35:43.473Z] : NO ERRORS REGISTERED
+[debug] [2022-06-11T06:35:43.474Z] : EXEC ENDED with event: run-script, message: success
+[debug] [2022-06-11T06:35:43.474Z] : TOTAL DURATION OF COMMAND EXEC : 80692
+[debug] [2022-06-11T06:35:43.522Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.com/baas/v1/cli/logs 
+<request body omitted>
+
+[debug] [2022-06-11T06:35:44.773Z] : <<<< HTTP RESPONSE : 400
+Response Headers: {"server":"ZGS","date":"Sat, 11 Jun 2022 06:35:43 GMT","content-type":"application/json;charset=ISO-8859-1","content-length":"147","connection":"close","set-cookie":["46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/","ZD_CSRF_TOKEN=d6719b6c-7055-4419-bc7d-6ceb73b31328;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=d6719b6c-7055-4419-bc7d-6ceb73b31328;path=/;SameSite=Strict;Secure;priority=high","JSESSIONID=1FB99E06EE6B8FFD1649114CBB745472; Path=/; Secure; HttpOnly"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"DENY"}
+
+[debug] [2022-06-11T06:35:44.775Z] : Response Body : {"status":"failure","data":{"error_code":"INPUT_SIZE_MORE_THAN_ALLOWED","message":"Please check if the size of the input is in the correct range"}}
+
+[debug] [2022-06-11T06:35:44.779Z] : Unable to send debug log to server: HTTP Error: 400, Please check if the size of the input is in the correct range
+[debug] [2022-06-11T06:35:45.884Z] : 
+[debug] [2022-06-11T06:35:45.886Z] : ----------------------------------------------------------------------
+[debug] [2022-06-11T06:35:45.886Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\kentc\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js run client:packageJson
+[debug] [2022-06-11T06:35:45.887Z] : CLI Version:  1.13.1
+[debug] [2022-06-11T06:35:45.887Z] : Platform:     win32
+[debug] [2022-06-11T06:35:45.887Z] : Node Version: v14.15.4
+[debug] [2022-06-11T06:35:45.889Z] : Time:         Sat Jun 11 2022 14:35:45 GMT+0800 (Philippine Standard Time)
+[debug] [2022-06-11T06:35:45.889Z] : ----------------------------------------------------------------------
+[debug] [2022-06-11T06:35:45.889Z] : 
+[debug] [2022-06-11T06:35:47.737Z] : > authorizing via signed-in user option
+[debug] [2022-06-11T06:35:47.738Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL"]
+[debug] [2022-06-11T06:35:47.759Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/8912000000029014 
+
+[debug] [2022-06-11T06:35:48.443Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Sat, 11 Jun 2022 06:35:47 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=ba2a1b22f2a5e14b0d2647f7e38884fc; Path=/","ZD_CSRF_TOKEN=b00968f7-5e46-42b8-a80c-2a53bd3775e0;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=b00968f7-5e46-42b8-a80c-2a53bd3775e0;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2022-06-11T06:35:48.450Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/8912000000029014/environment 
+
+[debug] [2022-06-11T06:35:49.095Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Sat, 11 Jun 2022 06:35:47 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=ba2a1b22f2a5e14b0d2647f7e38884fc; Path=/","ZD_CSRF_TOKEN=d6b83051-f265-4092-81da-66320bda9cb0;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=d6b83051-f265-4092-81da-66320bda9cb0;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[info] [2022-06-11T06:35:49.100Z] : 
+[info] [2022-06-11T06:35:49.101Z] : Executing packageJson script in C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3
+[debug] [2022-06-11T06:35:49.101Z] : Executing command > cd client && copy client-package.json build
+[info] [2022-06-11T06:35:49.102Z] : > cd client && copy client-package.json build
+[debug] [2022-06-11T06:35:49.220Z] : NO ERRORS REGISTERED
+[debug] [2022-06-11T06:35:49.222Z] : EXEC ENDED with event: run-script, message: success
+[debug] [2022-06-11T06:35:49.222Z] : TOTAL DURATION OF COMMAND EXEC : 1538
+[debug] [2022-06-11T06:35:49.246Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.com/baas/v1/cli/logs 
+<request body omitted>
+
+[debug] [2022-06-11T06:35:50.473Z] : <<<< HTTP RESPONSE : 400
+Response Headers: {"server":"ZGS","date":"Sat, 11 Jun 2022 06:35:49 GMT","content-type":"application/json;charset=ISO-8859-1","content-length":"147","connection":"close","set-cookie":["46512fd555=bbdfb771565421abbe10f7a180903d28; Path=/","ZD_CSRF_TOKEN=55f4a589-580c-420b-abe9-edb649082a54;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=55f4a589-580c-420b-abe9-edb649082a54;path=/;SameSite=Strict;Secure;priority=high","JSESSIONID=E23C54F44A97447423795CAB2B49E919; Path=/; Secure; HttpOnly"],"x-content-type-options":"nosniff","x-xss-protection":"1","x-frame-options":"DENY"}
+
+[debug] [2022-06-11T06:35:50.474Z] : Response Body : {"status":"failure","data":{"error_code":"INPUT_SIZE_MORE_THAN_ALLOWED","message":"Please check if the size of the input is in the correct range"}}
+
+[debug] [2022-06-11T06:35:50.476Z] : Unable to send debug log to server: HTTP Error: 400, Please check if the size of the input is in the correct range
+[info] [2022-06-11T06:34:20.154Z] : 
+[info] [2022-06-11T06:34:20.156Z] : Executing preserve script in C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3
+[debug] [2022-06-11T06:34:20.156Z] : Executing command > catalyst run client:build && catalyst run client:packageJson
+[info] [2022-06-11T06:34:20.157Z] : > catalyst run client:build && catalyst run client:packageJson
+[debug] [2022-06-11T06:35:50.593Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.com/baas/v1/project/8912000000029014/function 
+Query params: {"type":"basicio,event,cron,applogic,integration"}
+
+[debug] [2022-06-11T06:35:50.643Z] : CatalystError: Module path does not exists
+    at C:\Users\kentc\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\optional-import.js:49:19
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\kentc\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\optional-import.js:28:58) {
+  status: 500,
+  exit: 1,
+  original: undefined,
+  context: undefined,
+  errorId: 'OPT-IMP-1',
+  arg: [
+    '\x1B[1mzcatalyst-cli-plugin-react\x1B[22m',
+    '\x1B[3m\x1B[31mC:\\Users\\kentc\\Desktop\\Work\\DiamondMinds\\OrionV3\\client\\build\\node_modules\\zcatalyst-cli-plugin-react\x1B[39m\x1B[23m',
+    '\x1B[1mclient/build\x1B[22m'
+  ],
+  skipHelp: false,
+  fileName: 'C:\\Users\\kentc\\AppData\\Roaming\\npm\\node_modules\\zcatalyst-cli\\lib\\optional-import'
+}
+[debug] [2022-06-11T06:35:51.270Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Sat, 11 Jun 2022 06:35:50 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["46512fd555=63dd9cf89a6678b816d9580ec827ee61; Path=/","ZD_CSRF_TOKEN=1e0be419-1065-4ac0-a0e7-9b8261ed595d;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=1e0be419-1065-4ac0-a0e7-9b8261ed595d;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2022-06-11T06:35:51.278Z] : unknown eol undefined hence skipping check
+[info] [2022-06-11T06:35:51.426Z] : i server[orion]: URL : http://localhost:3000/server/orion/
+[info] [2022-06-11T06:35:51.428Z] : 
+[debug] [2022-06-11T06:35:51.432Z] : CatalystError: Module path does not exists
+    at C:\Users\kentc\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\optional-import.js:49:19
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\kentc\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\optional-import.js:28:58) {
+  status: 500,
+  exit: 1,
+  original: undefined,
+  context: undefined,
+  errorId: 'OPT-IMP-1',
+  arg: [
+    '\x1B[1mzcatalyst-cli-plugin-react\x1B[22m',
+    '\x1B[3m\x1B[31mC:\\Users\\kentc\\Desktop\\Work\\DiamondMinds\\OrionV3\\client\\build\\node_modules\\zcatalyst-cli-plugin-react\x1B[39m\x1B[23m',
+    '\x1B[1mclient/build\x1B[22m'
+  ],
+  skipHelp: false,
+  fileName: 'C:\\Users\\kentc\\AppData\\Roaming\\npm\\node_modules\\zcatalyst-cli\\lib\\optional-import'
+}
+[info] [2022-06-11T06:35:51.780Z] : i client[react-app]: URL : http://localhost:3000/app/
+[error] [2022-06-11T06:36:28.664Z] : × Unable to serve the requested file: C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3\client\build\requisition
+[debug] [2022-06-11T06:36:28.665Z] : Error: ENOENT: no such file or directory, stat 'C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3\client\build\requisition'
+[error] [2022-06-11T06:37:50.292Z] : × Unable to serve the requested file: C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3\client\build\requisition
+[debug] [2022-06-11T06:37:50.292Z] : Error: ENOENT: no such file or directory, stat 'C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3\client\build\requisition'
+[error] [2022-06-11T06:37:55.719Z] : × Unable to serve the requested file: C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3\client\build\requisition
+[debug] [2022-06-11T06:37:55.721Z] : Error: ENOENT: no such file or directory, stat 'C:\Users\kentc\Desktop\Work\DiamondMinds\OrionV3\client\build\requisition'
