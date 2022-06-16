@@ -13,7 +13,8 @@ function CandidateTab() {
             entryData={Candidates}
             tableColumns={CandidateCOLUMNS}
             newEntryLabel="Add Candidate"
-            buttonUrl={"/app/add-candidate"}
+            buttonUrl={"/app/candidate/add-candidate"}
+            rowUrl="/app/candidate/profile"
             statusValue={[
               { text: "Quick", color: "bg-[#5179DF]" },
               { text: "Que", color: "bg-[#F47E7E]" },

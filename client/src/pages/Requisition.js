@@ -13,6 +13,7 @@ function RequisitionTab() {
             tableColumns={RequisitionCOLUMNS}
             newEntryLabel="Add Requisition"
             buttonUrl={"/app/add-requisition"}
+            rowUrl={``}
             statusValue={[
               { text: "Open", color: "bg-[#5179DF]" },
               { text: "Closed", color: "bg-[#F47E7E]" },

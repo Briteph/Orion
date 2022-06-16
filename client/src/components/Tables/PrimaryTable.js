@@ -19,6 +19,7 @@ function PrimaryTable({
   entryData,
   newEntryLabel,
   buttonUrl,
+  rowUrl,
   statusValue,
   colIdxOfStatus,
 }) {
@@ -163,7 +164,9 @@ function PrimaryTable({
                                         newRowState[rowIndex].Status =
                                           status.text;
                                         setRowState(newRowState);
-                                        dropDownRef.current.setButtonColor(status.color);
+                                        dropDownRef.current.setButtonColor(
+                                          status.color
+                                        );
                                         dropDownRef.current.toggle();
                                       }}
                                     >
@@ -178,7 +181,7 @@ function PrimaryTable({
                               className="p-5 border-b-[0.5px] border-[#D3D3D3]"
                               {...cell.getCellProps()}
                             >
-                              {cell.render("Cell")}
+                              <Link to={rowUrl}>{cell.render("Cell")}</Link>
                             </td>
                           )}
                         </>
