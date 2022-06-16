@@ -1,11 +1,12 @@
 import React, { useMemo } from "react"
+import { Link } from "react-router-dom"
 import { useTable } from 'react-table'
 
 
 
-function SecondaryTable({tableColumns, entryData}) {
-    const columns = useMemo (() => tableColumns, [])
-    const data = useMemo (() => entryData, [])
+function SecondaryTable({tableColumns, entryData, rowUrl}) {
+    const columns = useMemo (() => tableColumns, [tableColumns])
+    const data = useMemo (() => entryData, [entryData])
     const tableInstance = useTable({
         columns,
         data
@@ -40,11 +41,14 @@ function SecondaryTable({tableColumns, entryData}) {
                         rows.map(row => {
                             prepareRow(row)
                             return (
+                                
                                 <tr className="hover:bg-[#5179DF] hover:bg-opacity-25" {...row.getRowProps()}>
                                     {
                                         row.cells.map((cell) => {
                                             return <td className="p-5 border-b-[0.5px] border-[#D3D3D3]" {...cell.getCellProps()}>
-                                                {cell.render('Cell')}
+                                                <Link to={rowUrl}>
+                                                    {cell.render('Cell')}
+                                                </Link>
                                             </td>
                                         })
                                     }

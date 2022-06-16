@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef, useImperativeHandle, forwardRef } from "react";
-import { BsFilter as FiltersIcon } from "react-icons/bs";
+
 import Card from "./card";
 
-// @params { children, label, buttonClass, labelClass, iconClass, cardItemClass }
+// @params { children, label, buttonClass, labelClass, iconClass, cardItemClass, dropDownIcon }
 const DropDown = forwardRef((props, ref) => {
   const innerref = useRef();
   const [open, setOpen] = useState(false);
@@ -36,7 +36,8 @@ const DropDown = forwardRef((props, ref) => {
         onClick={() => setOpen(!open)}
         aria-label={`${open ? "Hide filters menu" : "Show filters menu"}`}
       >
-        <FiltersIcon className={`${props.iconClass ? props.iconClass : ""}`} />
+        {props.dropDownIcon}
+        {/* <FiltersIcon className={`${props.iconClass ? props.iconClass : ""}`} /> */}
         <div
           className={`items-center text-lg font-medium ${
             props.labelClass ? props.labelClass : ""
