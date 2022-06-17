@@ -1,4 +1,5 @@
 import React, { useMemo, useRef, useState } from "react";
+import { BsFilter as FiltersIcon } from "react-icons/bs";
 import {
   useTable,
   useRowSelect,
@@ -143,7 +144,16 @@ function PrimaryTable({
                     {row.cells.map((cell, i) => {
                       return (
                         <>
-                          {i === colIdxOfStatus ? (
+                          {i !== 0 && i !== colIdxOfStatus ? (
+                            <td
+                              className="border-b-[0.5px] border-[#D3D3D3]"
+                              {...cell.getCellProps()}
+                            >
+                              <div className="p-5">
+                                <Link to={rowUrl}>{cell.render("Cell")}</Link>
+                              </div>
+                            </td>
+                          ) : i === colIdxOfStatus ? (
                             <td
                               className="p-5 border-b-[0.5px] border-[#D3D3D3]"
                               {...cell.getCellProps()}
@@ -178,10 +188,10 @@ function PrimaryTable({
                             </td>
                           ) : (
                             <td
-                              className="p-5 border-b-[0.5px] border-[#D3D3D3]"
+                              className="border-b-[0.5px] border-[#D3D3D3]"
                               {...cell.getCellProps()}
                             >
-                              <Link to={rowUrl}>{cell.render("Cell")}</Link>
+                              <div className="p-5">{cell.render("Cell")}</div>
                             </td>
                           )}
                         </>

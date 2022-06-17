@@ -5,10 +5,9 @@ import {
   useImperativeHandle,
   forwardRef,
 } from "react";
-import { BsFilter as FiltersIcon } from "react-icons/bs";
 import Card from "./card";
 
-// @params { children, label, buttonClass, labelClass, iconClass, cardItemClass, menu }
+// @params { children, label, buttonClass, labelClass, iconClass, cardItemClass, menu, dropDownIcon }
 const DropDown = forwardRef((props, ref) => {
   const innerref = useRef();
   const [open, setOpen] = useState(false);
@@ -40,10 +39,13 @@ const DropDown = forwardRef((props, ref) => {
   }, [open]);
 
   useEffect(() => {
-    const buttonDetails = props.menu.filter((e) => {
-      return e.text === props.label.props.value;
-    });
-    setButtonColor(buttonDetails[0].color);
+    if(props.menu){
+      const buttonDetails = props.menu.filter((e) => {
+        return e.text === props.label.props.value;
+      });
+      setButtonColor(buttonDetails[0].color);
+    }
+    
   }, [buttonColor]);
 
   return (
@@ -55,7 +57,8 @@ const DropDown = forwardRef((props, ref) => {
         onClick={() => setOpen(!open)}
         aria-label={`${open ? "Hide filters menu" : "Show filters menu"}`}
       >
-        <FiltersIcon className={`${props.iconClass ? props.iconClass : ""}`} />
+        {props.dropDownIcon}
+        {/* <FiltersIcon className={`${props.iconClass ? props.iconClass : ""}`} /> */}
         <div
           className={`items-center text-lg font-medium ${
             props.labelClass ? props.labelClass : ""

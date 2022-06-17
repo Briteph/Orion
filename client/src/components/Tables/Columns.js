@@ -58,10 +58,6 @@ export const RequisitionCOLUMNS = [
         accessor: 'Address'
     },
     {
-        Header: 'Recruiter',
-        accessor: 'Recruiter'
-    },
-    {
         Header: 'Date Created',
         accessor: 'Date_Created'
     },
