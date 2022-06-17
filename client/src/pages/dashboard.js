@@ -28,7 +28,7 @@ function Dashboard() {
                             <FormSelect defValue={'This Year'} options={[{key:1,value:"Last Year", text:"Last Year"}]} icon = {<SortDown className="text-[#5179DF] absolute bottom-2 right-0"/>} addClass='text-[#5179DF] rounded-lg'/>
                         </div>
                     </div>
-                    <div className='KPI-container mt-4 grid grid-cols-4 px-2'>
+                    <div className='KPI-container mt-4 flex px-2'>
                         <CardKpi header = 'Total Requisition' subHeader= '123' subSpan='21' spanColor='text-green-500'/>
                         <CardKpi header = 'Total Candidates' subHeader= '23' subSpan='10' spanColor='text-green-500'/>
                         <CardKpi header = 'Total Employees' subHeader= '50' subSpan='30' spanColor='text-green-500'/>

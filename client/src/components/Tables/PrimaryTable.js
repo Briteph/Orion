@@ -21,6 +21,8 @@ function PrimaryTable({
   newEntryLabel,
   buttonUrl,
   rowUrl,
+  statusValue,
+  colIdxOfStatus,
 }) {
   const dropDownRef = useRef(null);
   const [colState, setColState] = useState(tableColumns);
@@ -69,14 +71,6 @@ function PrimaryTable({
     state,
   } = tableInstance;
 
-  let selectedRows = JSON.stringify(
-    {
-      selectedFlatRows: selectedFlatRows.map((row) => row.original),
-    },
-    null,
-    2
-  );
-  // console.log(rows)
   return (
     <>
       <div className="Requisition">
@@ -85,15 +79,14 @@ function PrimaryTable({
             <ButtonPrimary
               addClass="bg-[#F47E7E] text-[#FFFFFF] flex align-center border-none"
               onClick={() => {
-                const selected_data = JSON.parse(selectedRows);
-                let temp_data = [...rowState];
-                let selectedIDs = [];
-                for (let i of selected_data.selectedFlatRows) {
-                  selectedIDs.push(i.ID);
-                }
-                const newData = temp_data.filter((e) => {
-                  return !selectedIDs.includes(e.ID);
+                const filteredData = rows.filter((e) => {
+                  return !e.isSelected;
                 });
+                const newData = [
+                  ...filteredData.map((e) => {
+                    return e.values;
+                  }),
+                ];
                 setRowState(newData);
               }}
             >
@@ -151,7 +144,7 @@ function PrimaryTable({
                     {row.cells.map((cell, i) => {
                       return (
                         <>
-                          {i !== 0 && i !== 2 ? (
+                          {i !== 0 && i !== colIdxOfStatus ? (
                             <td
                               className="border-b-[0.5px] border-[#D3D3D3]"
                               {...cell.getCellProps()}
@@ -160,63 +153,38 @@ function PrimaryTable({
                                 <Link to={rowUrl}>{cell.render("Cell")}</Link>
                               </div>
                             </td>
-                          ) : i === 2 ? (
+                          ) : i === colIdxOfStatus ? (
                             <td
-                              className="border-b-[0.5px] border-[#D3D3D3]"
+                              className="p-5 border-b-[0.5px] border-[#D3D3D3]"
                               {...cell.getCellProps()}
                             >
-                              <div className="p-5">
-                                <DropDown
-                                  dropDownIcon={<FiltersIcon className="text-[#fffff]"/>}
-                                  label={cell.render("Cell")}
-                                  buttonClass={
-                                    cell.value === "Open"
-                                      ? "bg-[#5179DF]"
-                                      : cell.value === "Closed"
-                                      ? "bg-[#F47E7E]"
-                                      : cell.value === "Filled"
-                                      ? "bg-[#5DA36D]"
-                                      : ""
-                                  }
-                                  labelClass="text-white"
-                                  iconClass="text-white"
-                                  ref={dropDownRef}
-                                >
-                                  <div
-                                    className="hover:bg-[#5179DF] hover:bg-opacity-25"
-                                    onClick={() => {
-                                      let newRowState = [...rowState];
-                                      newRowState[rowIndex].Status = "Open";
-                                      setRowState(newRowState);
-                                      dropDownRef.current.toggle();
-                                    }}
-                                  >
-                                    Open
-                                  </div>
-                                  <div
-                                    className="hover:bg-[#5179DF] hover:bg-opacity-25"
-                                    onClick={() => {
-                                      let newRowState = [...rowState];
-                                      newRowState[rowIndex].Status = "Closed";
-                                      setRowState(newRowState);
-                                      dropDownRef.current.toggle();
-                                    }}
-                                  >
-                                    Closed
-                                  </div>
-                                  <div
-                                    className="hover:bg-[#5179DF] hover:bg-opacity-25"
-                                    onClick={() => {
-                                      let newRowState = [...rowState];
-                                      newRowState[rowIndex].Status = "Filled";
-                                      setRowState(newRowState);
-                                      dropDownRef.current.toggle();
-                                    }}
-                                  >
-                                    Filled
-                                  </div>
-                                </DropDown>
-                              </div>
+                              <DropDown
+                                label={cell.render("Cell")}
+                                labelClass="text-white"
+                                iconClass="text-white"
+                                menu={statusValue}
+                                ref={dropDownRef}
+                              >
+                                {statusValue.map((status) => {
+                                  return (
+                                    <div
+                                      className="hover:bg-[#5179DF] hover:bg-opacity-25"
+                                      onClick={() => {
+                                        let newRowState = [...rowState];
+                                        newRowState[rowIndex].Status =
+                                          status.text;
+                                        setRowState(newRowState);
+                                        dropDownRef.current.setButtonColor(
+                                          status.color
+                                        );
+                                        dropDownRef.current.toggle();
+                                      }}
+                                    >
+                                      {status.text}
+                                    </div>
+                                  );
+                                })}
+                              </DropDown>
                             </td>
                           ) : (
                             <td

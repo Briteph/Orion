@@ -5,7 +5,7 @@ import { BsGraphUp as Trend, BsPlus as Plus } from "react-icons/bs"
 // import { BiDollar as Dollar } from "react-icons/bi"
 function CardKpi({ children, id, header, subHeader,subSpan, spanColor }) {
     return (
-    <Card addClass="border-none w-64 h-32 rounded-[18px]">
+    <Card addClass="border-none w-64 h-32 rounded-[18px] CardKPI">
         <div className="pb-1">
             <div className="">
                 <div className="flex justify-between mb-1">
