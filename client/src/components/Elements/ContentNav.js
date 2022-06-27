@@ -8,6 +8,7 @@ import {
   FaChair as Requisition,
   FaUserCircle as UserIcon,
 } from "react-icons/fa";
+import DropDown from "./DropDown";
 function ContentNav({ children }) {
   let user = "Zach";
   const URLs = {
@@ -81,12 +82,22 @@ function ContentNav({ children }) {
             </Link>
           </div>
         </div>
-        <div className="w-full h-full mt-12 mr-4 p-5 bg-[#EDEDED] rounded-3xl">
+        <div className="w-full min-h-screen mr-4 p-5 bg-[#EDEDED] rounded-3xl">
           <div className="profile w-full flex text-[#2B4993] justify-end text-[1.1rem] font-bold pr-4 mb-6 items-center">
-            Hi {user}!{" "}
-            <span className=" ml-2 text-[2rem]">
-              <UserIcon />
-            </span>
+            <DropDown
+              label={`Hi ${user}!`}
+              dropDownIcon={<UserIcon className="text-[1.4rem]" />}
+              labelClass="text-[1.4rem]"
+              buttonClass="w-40 bg-[#EDEDED]"
+            >
+              <button className="hover:bg-[#5179DF] hover:bg-opacity-25 hover:text-black w-full">
+                Profile
+              </button>
+              <button className="hover:bg-[#5179DF] hover:bg-opacity-25 hover:text-black w-full">
+                Settings
+              </button>
+              {/* Hi {user}! <span className=' ml-2 text-[2rem]'><UserIcon/></span>  */}
+            </DropDown>
           </div>
           {children}
         </div>

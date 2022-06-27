@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ButtonSecondary from "../components/Elements/ButtonSecondary.js";
-import CardKpi from "../components/Cards/CardKPI.js";
+import CardKPI from "../components/Cards/CardKPI.js";
 import Card from "../components/Elements/Card.js";
 import ContentNav from "../components/Elements/ContentNav";
 import { FaUserPlus as AddIcon } from "react-icons/fa";
@@ -32,30 +32,30 @@ function Dashboard() {
                 icon={
                   <SortDown className="text-[#5179DF] absolute bottom-2 right-0" />
                 }
-                addClass="text-[#5179DF]"
+                addClass="text-[#5179DF] rounded-lg"
               />
             </div>
           </div>
-          <div className="KPI-container mt-4 grid grid-cols-4 px-2">
-            <CardKpi
+          <div className="KPI-container mt-4 flex px-2">
+            <CardKPI
               header="Total Requisition"
               subHeader="123"
               subSpan="21"
               spanColor="text-green-500"
             />
-            <CardKpi
+            <CardKPI
               header="Total Candidates"
               subHeader="23"
               subSpan="10"
               spanColor="text-green-500"
             />
-            <CardKpi
+            <CardKPI
               header="Total Employees"
               subHeader="50"
               subSpan="30"
               spanColor="text-green-500"
             />
-            <CardKpi
+            <CardKPI
               header="Total Earnings"
               subHeader="12,000"
               subSpan="4"
@@ -98,7 +98,7 @@ function Dashboard() {
                 <div className="text-[#2B4993] font-bold text-[20px]">
                   New Requisition
                 </div>
-                <Link to={"/app/add-requisition"}>
+                <Link to={"/app/requistion/add-requisition"}>
                   <ButtonSecondary addClass="text-white flex items-center ">
                     <span className="mr-1">
                       <AddIcon />
@@ -111,7 +111,7 @@ function Dashboard() {
                 <SecondaryTable
                   tableColumns={NewRequisitionCOLUMNS}
                   entryData={NewRequisitions}
-                  rowUrl={``}
+                  rowUrl="/app/requistion/info"
                 />
               </div>
               <div className="text-[#2B4993] flex m-auto my-5 font-bold justify-center align-bottom">

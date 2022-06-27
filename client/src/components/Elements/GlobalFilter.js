@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useAsyncDebounce } from "react-table";
 import { BiSearch as Icon } from "react-icons/bi";
 
-export function GlobalFilter({
+export default function GlobalFilter({
   preGlobalFilteredRows,
   globalFilter,
   setGlobalFilter,

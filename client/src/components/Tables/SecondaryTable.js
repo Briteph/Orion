@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { useTable } from "react-table";
 
 function SecondaryTable({ tableColumns, entryData, rowUrl }) {
-  const columns = useMemo(() => tableColumns, []);
-  const data = useMemo(() => entryData, []);
+  const columns = useMemo(() => tableColumns, [tableColumns]);
+  const data = useMemo(() => entryData, [entryData]);
   const tableInstance = useTable({
     columns,
     data,

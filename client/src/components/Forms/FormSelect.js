@@ -17,7 +17,7 @@ function FormSelect({
       <label htmlFor={id} className={"" + labelClass}>
         {children} {required && <span aria-hidden="true">*</span>}
       </label>
-      <div className="relative">
+      <div className="relative rounder-xl">
         <select
           name={id}
           id={id}

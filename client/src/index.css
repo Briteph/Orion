@@ -35,3 +35,11 @@ code {
 .rowContainer + .rowContainer{
   margin-top: 1rem;
 }
+
+/* .tab + .tab{
+  margin-left: 1rem;
+} */
+
+.CardKPI + .CardKPI {
+  margin-left: 1.2rem;
+}
