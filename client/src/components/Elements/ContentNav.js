@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-// import ButtonPrimary from "./buttonPrimary.js"
+// import ButtonPrimary from "./ButtonPrimary.js"
 import logo from "../../Assets/images/tumi_logo_blue.png";
 import { MdDashboard as Dashboard } from "react-icons/md";
 import { BsFillBriefcaseFill as Candidate } from "react-icons/bs";

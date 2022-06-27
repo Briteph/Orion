@@ -1,6 +1,6 @@
 import React from "react";
 import ContentNav from "../components/Elements/ContentNav";
-import Table from "../components/Tables/PrimaryTable";
+import PrimaryTable from "../components/Tables/PrimaryTable";
 import Candidates from "../components/Tables/Candidates.json";
 import { CandidateCOLUMNS } from "../components/Tables/Columns";
 
@@ -9,7 +9,7 @@ function CandidateTab() {
     <>
       <ContentNav>
         <div className="Table">
-          <Table
+          <PrimaryTable
             entryData={Candidates}
             tableColumns={CandidateCOLUMNS}
             newEntryLabel="Add Candidate"

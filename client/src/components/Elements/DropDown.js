@@ -6,7 +6,7 @@ import {
   forwardRef,
 } from "react";
 import { BsFilter as FiltersIcon } from "react-icons/bs";
-import Card from "./card";
+import Card from "./Card";
 
 // @params { children, label, buttonClass, labelClass, iconClass, cardItemClass, menu }
 const DropDown = forwardRef((props, ref) => {

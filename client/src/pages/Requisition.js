@@ -1,6 +1,6 @@
 import React from "react";
 import ContentNav from "../components/Elements/ContentNav";
-import Table from "../components/Tables/PrimaryTable";
+import PrimaryTable from "../components/Tables/PrimaryTable";
 import Requisitions from "../components/Tables/Requisitions.json";
 import { RequisitionCOLUMNS } from "../components/Tables/Columns";
 function RequisitionTab() {
@@ -8,7 +8,7 @@ function RequisitionTab() {
     <>
       <ContentNav>
         <div className="Table">
-          <Table
+          <PrimaryTable
             entryData={Requisitions}
             tableColumns={RequisitionCOLUMNS}
             newEntryLabel="Add Requisition"

@@ -10,35 +10,32 @@ function FormSelect({
   options = [],
   onChange,
   icon,
-  addClass
+  addClass,
 }) {
   return (
     <div>
-        <label
-        htmlFor={id}
-        className={"" + labelClass}
-        >
+      <label htmlFor={id} className={"" + labelClass}>
         {children} {required && <span aria-hidden="true">*</span>}
-        </label>
-        <div className="relative">
-            <select
-                name={id}
-                id={id}
-                value={value}
-                className={`w-full px-5 font-bold appearance-none bg-[#EDEDED] focus:outline-none ${addClass}`}
-                onChange={onChange}
-            >
-                <option value="">{defValue}</option>
-                {options.map((option) => (
-                <option key={option.key} value={option.value}>
-                    {option.text}
-                </option>
-                ))}
-            </select>
-            {icon}
-        </div>
+      </label>
+      <div className="relative">
+        <select
+          name={id}
+          id={id}
+          value={value}
+          className={`w-full px-5 font-bold appearance-none bg-[#EDEDED] focus:outline-none ${addClass}`}
+          onChange={onChange}
+        >
+          <option value="">{defValue}</option>
+          {options.map((option) => (
+            <option key={option.key} value={option.value}>
+              {option.text}
+            </option>
+          ))}
+        </select>
+        {icon}
+      </div>
     </div>
-    );
+  );
 }
 
 export default FormSelect;
