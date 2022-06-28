@@ -45,19 +45,19 @@ function ContentNav({ children }) {
 
   return (
     <>
-      <div className="flex NavBar select-none">
-        <div className="w-1/5 h-screen">
-          <div className="grid  logo h-32 justify-items-center p-8 select-none">
+      <div className="flex select-none NavBar">
+        <div className="h-screen">
+          <div className="grid h-32 p-8 select-none logo justify-items-center">
             <img src={logo} alt="" className="m-0" />
           </div>
-          <div className="navLinks mt-5 grid ml-12 ">
+          <div className="grid mt-5 ml-8 navLinks ">
             <Link to={"/app"}>
               <div
-                className={` py-3 flex rounded-l-3xl pl-8
+                className={` py-3 flex rounded-l-3xl pl-8 w-56
                             ${
                               URLs.dashboard.includes(useLocation().pathname)
                                 ? "text-white bg-[#5179DF] drop-shadow-xl"
-                                : ""
+                                : "hover:bg-[#b8c5e6] hover:bg-opacity-30"
                             }
                             `}
               >
@@ -69,11 +69,11 @@ function ContentNav({ children }) {
             </Link>
             <Link to={"/app/requisition"}>
               <div
-                className={` py-3 flex rounded-l-3xl pl-8
+                className={` py-3 flex rounded-l-3xl pl-8 w-56
                             ${
                               URLs.requisition.includes(useLocation().pathname)
                                 ? "text-white bg-[#5179DF] drop-shadow-xl"
-                                : ""
+                                : "hover:bg-[#b8c5e6] hover:bg-opacity-30"
                             }
                             `}
               >
@@ -85,11 +85,11 @@ function ContentNav({ children }) {
             </Link>
             <Link to={"/app/candidate"}>
               <div
-                className={` py-3 flex rounded-l-3xl pl-8
+                className={` py-3 flex rounded-l-3xl pl-8 w-56
                             ${
                               URLs.candidate.includes(useLocation().pathname)
                                 ? "text-white bg-[#5179DF] drop-shadow-xl"
-                                : ""
+                                : "hover:bg-[#b8c5e6] hover:bg-opacity-30"
                             }
                             `}
               >
@@ -101,53 +101,55 @@ function ContentNav({ children }) {
             </Link>
           </div>
         </div>
-        <div className="w-full min-h-screen p-5 bg-[#EDEDED]">
-          <div className="profile w-full flex text-[#2B4993] justify-end text-[1.1rem] font-bold pr-4 my-6 items-center gap-2">
-            <UserIcon
-              className="text-2xl"
-              onClick={() => setShowCard(!showCard)}
-            />
-            <div onClick={() => setShowCard(!showCard)} ref={innerRef}>
-              Hi, {user}
-            </div>
-            {showCard ? (
-              <div className="absolute translate-y-[5.5rem] z-[999]">
-                <div className="w-52 relative py-[0.62rem] px-[0.60rem] border-gray-100 bg-white rounded-lg drop-shadow-lg items-center">
-                  <div className="flex flex-col gap-1 uppercase text-lg">
-                    <button className="rounded p-1 text-[#2B4993] hover:bg-[#5179DF] hover:bg-opacity-25 w-full">
-                      <div className="flex items-center justify-between w-full">
-                        <div className="flex items-center gap-2">
-                          <UserIcon className="text-2xl" />
-                          <div>Profile</div>
+        <div className="w-full min-h-screen pt-6 pl-6 bg-[#EDEDED]">
+          <div className="profile w-full flex text-[#2B4993] justify-end text-[1.1rem] font-bold pr-4 mb-6 items-center gap-2">
+            <div className="flex items-center gap-2 p-2 rounded-md hover:bg-[#b8c5e6] hover:bg-opacity-30">
+              <UserIcon
+                className="text-2xl"
+                onClick={() => setShowCard(!showCard)}
+              />
+              <div onClick={() => setShowCard(!showCard)} ref={innerRef}>
+                Hi, {user}
+              </div>
+              {showCard ? (
+                <div className="absolute translate-y-[5.5rem] z-[999]">
+                  <div className="w-52 relative py-[0.62rem] px-[0.60rem] border-gray-100 bg-white rounded-lg drop-shadow-lg items-center">
+                    <div className="flex flex-col gap-1 text-lg uppercase">
+                      <button className="rounded p-1 text-[#2B4993] hover:bg-[#5179DF] hover:bg-opacity-25 w-full">
+                        <div className="flex items-center justify-between w-full">
+                          <div className="flex items-center gap-2">
+                            <UserIcon className="text-2xl" />
+                            <div>Profile</div>
+                          </div>
+                          <div>{`>`}</div>
                         </div>
-                        <div>{`>`}</div>
-                      </div>
-                    </button>
-                    <button className="rounded p-1 text-[#2B4993] hover:bg-[#5179DF] hover:bg-opacity-25 w-full">
-                      <div className="flex items-center justify-between w-full">
-                        <div className="flex items-center gap-2">
-                          <Settings className="text-2xl" />
-                          <div>Settings</div>
+                      </button>
+                      <button className="rounded p-1 text-[#2B4993] hover:bg-[#5179DF] hover:bg-opacity-25 w-full">
+                        <div className="flex items-center justify-between w-full">
+                          <div className="flex items-center gap-2">
+                            <Settings className="text-2xl" />
+                            <div>Settings</div>
+                          </div>
+                          <div>{`>`}</div>
                         </div>
-                        <div>{`>`}</div>
-                      </div>
-                    </button>
-                    <button className="rounded p-1 text-[#2B4993] hover:bg-[#5179DF] hover:bg-opacity-25 w-full">
-                      <div className="flex items-center justify-between w-full">
-                        <div className="flex items-center gap-2">
-                          <Logout className="text-2xl" />
-                          <div>Logout</div>
+                      </button>
+                      <button className="rounded p-1 text-[#2B4993] hover:bg-[#5179DF] hover:bg-opacity-25 w-full">
+                        <div className="flex items-center justify-between w-full">
+                          <div className="flex items-center gap-2">
+                            <Logout className="text-2xl" />
+                            <div>Logout</div>
+                          </div>
                         </div>
-                      </div>
-                    </button>
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ) : (
-              ""
-            )}
+              ) : (
+                ""
+              )}
+            </div>
           </div>
-          {children}
+          <div className="overflow-y-auto h-[88.5vh]">{children}</div>
         </div>
       </div>
     </>
