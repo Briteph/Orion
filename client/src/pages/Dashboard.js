@@ -36,34 +36,36 @@ function Dashboard() {
               />
             </div>
           </div>
-          <div className="flex px-2 mt-4 KPI-container">
+          <div className="flex flex-wrap gap-3 px-2 mt-4 sm:flex-nowrap KPI-container">
             <CardKPI
               header="Total Requisition"
               subHeader="123"
               subSpan="21"
-              spanColor="text-green-500"
+              spanColor={{incline:"text-green-500", decline: "text-red-500"}}
+              decline={true}
             />
             <CardKPI
               header="Total Candidates"
               subHeader="23"
               subSpan="10"
-              spanColor="text-green-500"
+              spanColor={{incline:"text-green-500", decline: "text-red-500"}}
             />
             <CardKPI
               header="Total Employees"
               subHeader="50"
               subSpan="30"
-              spanColor="text-green-500"
+              spanColor={{incline:"text-green-500", decline: "text-red-500"}}
+              decline={true}
             />
             <CardKPI
               header="Total Earnings"
               subHeader="12,000"
               subSpan="4"
-              spanColor="text-green-500"
+              spanColor={{incline:"text-green-500", decline: "text-red-500"}}
             />
           </div>
-          <div className="flex px-2">
-            <Card addClass={"mt-8 w-1/2 mr-4 rounded-[16px] pb-0"}>
+          <div className="flex flex-col flex-wrap gap-5 px-2 mt-10 sm:flex-row sm:flex-nowrap">
+            <Card addClass={"w-full sm:w-1/2 rounded-[16px] pb-0"}>
               <div className="flex justify-between table-header">
                 <div className="text-[#2B4993] font-bold text-[20px]">
                   New Candidate
@@ -93,7 +95,7 @@ function Dashboard() {
                 </div>
               </div>
             </Card>
-            <Card addClass={"mt-8 w-1/2 ml-4 rounded-[16px] pb-0"}>
+            <Card addClass={"w-full sm:w-1/2 rounded-[16px] pb-0"}>
               <div className="flex justify-between table-header">
                 <div className="text-[#2B4993] font-bold text-[20px]">
                   New Requisition
