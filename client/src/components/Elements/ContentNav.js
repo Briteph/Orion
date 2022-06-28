@@ -111,43 +111,43 @@ function ContentNav({ children }) {
               <div onClick={() => setShowCard(!showCard)} ref={innerRef}>
                 Hi, {user}
               </div>
-              {showCard ? (
-                <div className="absolute translate-y-[5.5rem] z-[999]">
-                  <div className="w-52 relative py-[0.62rem] px-[0.60rem] border-gray-100 bg-white rounded-lg drop-shadow-lg items-center">
-                    <div className="flex flex-col gap-1 text-lg uppercase">
-                      <button className="rounded p-1 text-[#2B4993] hover:bg-[#5179DF] hover:bg-opacity-25 w-full">
-                        <div className="flex items-center justify-between w-full">
-                          <div className="flex items-center gap-2">
-                            <UserIcon className="text-2xl" />
-                            <div>Profile</div>
-                          </div>
-                          <div>{`>`}</div>
+            </div>
+            {showCard ? (
+              <div className="absolute translate-y-[5.5rem] z-[999]">
+                <div className="w-52 relative py-[0.62rem] px-[0.60rem] border-gray-100 bg-white rounded-lg drop-shadow-lg items-center">
+                  <div className="flex flex-col gap-1 text-lg uppercase">
+                    <button className="rounded p-1 text-[#2B4993] hover:bg-[#5179DF] hover:bg-opacity-25 w-full">
+                      <div className="flex items-center justify-between w-full">
+                        <div className="flex items-center gap-2">
+                          <UserIcon className="text-2xl" />
+                          <div>Profile</div>
                         </div>
-                      </button>
-                      <button className="rounded p-1 text-[#2B4993] hover:bg-[#5179DF] hover:bg-opacity-25 w-full">
-                        <div className="flex items-center justify-between w-full">
-                          <div className="flex items-center gap-2">
-                            <Settings className="text-2xl" />
-                            <div>Settings</div>
-                          </div>
-                          <div>{`>`}</div>
+                        <div>{`>`}</div>
+                      </div>
+                    </button>
+                    <button className="rounded p-1 text-[#2B4993] hover:bg-[#5179DF] hover:bg-opacity-25 w-full">
+                      <div className="flex items-center justify-between w-full">
+                        <div className="flex items-center gap-2">
+                          <Settings className="text-2xl" />
+                          <div>Settings</div>
                         </div>
-                      </button>
-                      <button className="rounded p-1 text-[#2B4993] hover:bg-[#5179DF] hover:bg-opacity-25 w-full">
-                        <div className="flex items-center justify-between w-full">
-                          <div className="flex items-center gap-2">
-                            <Logout className="text-2xl" />
-                            <div>Logout</div>
-                          </div>
+                        <div>{`>`}</div>
+                      </div>
+                    </button>
+                    <button className="rounded p-1 text-[#2B4993] hover:bg-[#5179DF] hover:bg-opacity-25 w-full">
+                      <div className="flex items-center justify-between w-full">
+                        <div className="flex items-center gap-2">
+                          <Logout className="text-2xl" />
+                          <div>Logout</div>
                         </div>
-                      </button>
-                    </div>
+                      </div>
+                    </button>
                   </div>
                 </div>
-              ) : (
-                ""
-              )}
-            </div>
+              </div>
+            ) : (
+              ""
+            )}
           </div>
           <div className="overflow-y-auto h-[88.5vh]">{children}</div>
         </div>
