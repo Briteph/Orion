@@ -1,16 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-// import ButtonPrimary from "./ButtonPrimary.js"
 import logo from "../../Assets/images/tumi_logo_blue.png";
-import { MdDashboard as Dashboard } from "react-icons/md";
+import { MdDashboard as Dashboard, MdLogout as Logout } from "react-icons/md";
 import { BsFillBriefcaseFill as Candidate } from "react-icons/bs";
 import {
   FaChair as Requisition,
   FaUserCircle as UserIcon,
 } from "react-icons/fa";
-import DropDown from "./DropDown";
+import { IoIosSettings as Settings } from "react-icons/io";
+import { CgProfile as Profile } from "react-icons/cg";
+
 function ContentNav({ children }) {
-  let user = "Zach";
+  const [showCard, setShowCard] = useState(false);
+  const user = "Zach";
   const URLs = {
     requisition: [
       "/app/requisition",
@@ -24,6 +26,7 @@ function ContentNav({ children }) {
     ],
     dashboard: ["/app"],
   };
+
   return (
     <>
       <div className="flex NavBar select-none">
@@ -83,21 +86,48 @@ function ContentNav({ children }) {
           </div>
         </div>
         <div className="w-full min-h-screen mr-4 p-5 bg-[#EDEDED] rounded-3xl">
-          <div className="profile w-full flex text-[#2B4993] justify-end text-[1.1rem] font-bold pr-4 mb-6 items-center">
-            <DropDown
-              label={`Hi ${user}!`}
-              dropDownIcon={<UserIcon className="text-[1.4rem]" />}
-              labelClass="text-[1.4rem]"
-              buttonClass="w-40 bg-[#EDEDED]"
-            >
-              <button className="hover:bg-[#5179DF] hover:bg-opacity-25 hover:text-black w-full">
-                Profile
-              </button>
-              <button className="hover:bg-[#5179DF] hover:bg-opacity-25 hover:text-black w-full">
-                Settings
-              </button>
-              {/* Hi {user}! <span className=' ml-2 text-[2rem]'><UserIcon/></span>  */}
-            </DropDown>
+          <div 
+            className="profile w-full flex text-[#2B4993] justify-end text-[1.1rem] font-bold pr-4 my-6 items-center gap-2"
+            onClick={() => setShowCard(!showCard)}
+          >
+            <UserIcon className="text-2xl" />
+            <div>Hi, {user}</div>
+            {showCard ? (
+              <div className="absolute translate-y-[5.5rem] z-[999]">
+                <div className="w-52 relative py-[0.62rem] px-[0.60rem] border-gray-100 bg-white rounded-lg drop-shadow-lg items-center">
+                  <div className="flex flex-col gap-1 uppercase text-lg">
+                    <button className="rounded p-1 text-[#2B4993] hover:bg-[#5179DF] hover:bg-opacity-25 w-full">
+                      <div className="flex items-center justify-between w-full">
+                        <div className="flex items-center gap-2">
+                          <UserIcon className="text-2xl" />
+                          <div>Profile</div>
+                        </div>
+                        <div>{`>`}</div>
+                      </div>
+                    </button>
+                    <button className="rounded p-1 text-[#2B4993] hover:bg-[#5179DF] hover:bg-opacity-25 w-full">
+                      <div className="flex items-center justify-between w-full">
+                        <div className="flex items-center gap-2">
+                          <Settings className="text-2xl" />
+                          <div>Settings</div>
+                        </div>
+                        <div>{`>`}</div>
+                      </div>
+                    </button>
+                    <button className="rounded p-1 text-[#2B4993] hover:bg-[#5179DF] hover:bg-opacity-25 w-full">
+                      <div className="flex items-center justify-between w-full">
+                        <div className="flex items-center gap-2">
+                          <Logout className="text-2xl" />
+                          <div>Logout</div>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              ""
+            )}
           </div>
           {children}
         </div>

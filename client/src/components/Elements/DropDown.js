@@ -59,7 +59,7 @@ const DropDown = forwardRef((props, ref) => {
         {props.dropDownIcon}
         {/* <FiltersIcon className={`${props.iconClass ? props.iconClass : ""}`} /> */}
         <div
-          className={`items-center text-lg font-medium ${
+          className={`flex items-center text-lg font-medium ${
             props.labelClass ? props.labelClass : ""
           }`}
         >
