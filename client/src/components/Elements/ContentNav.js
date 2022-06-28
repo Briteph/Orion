@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../../Assets/images/tumi_logo_blue.png";
 import { MdDashboard as Dashboard, MdLogout as Logout } from "react-icons/md";
@@ -8,10 +8,10 @@ import {
   FaUserCircle as UserIcon,
 } from "react-icons/fa";
 import { IoIosSettings as Settings } from "react-icons/io";
-import { CgProfile as Profile } from "react-icons/cg";
 
 function ContentNav({ children }) {
   const [showCard, setShowCard] = useState(false);
+  const innerRef = useRef();
   const user = "Zach";
   const URLs = {
     requisition: [
@@ -26,6 +26,22 @@ function ContentNav({ children }) {
     ],
     dashboard: ["/app"],
   };
+
+  useEffect(() => {
+    function checkForOutsideClick(event) {
+      if (
+        showCard &&
+        innerRef.current &&
+        !innerRef.current.contains(event.target)
+      ) {
+        setShowCard(false);
+      }
+    }
+    document.addEventListener("mousedown", checkForOutsideClick);
+    return () => {
+      document.removeEventListener("mousedown", checkForOutsideClick);
+    };
+  }, [showCard]);
 
   return (
     <>
@@ -85,13 +101,15 @@ function ContentNav({ children }) {
             </Link>
           </div>
         </div>
-        <div className="w-full min-h-screen mr-4 p-5 bg-[#EDEDED] rounded-3xl">
-          <div 
-            className="profile w-full flex text-[#2B4993] justify-end text-[1.1rem] font-bold pr-4 my-6 items-center gap-2"
-            onClick={() => setShowCard(!showCard)}
-          >
-            <UserIcon className="text-2xl" />
-            <div>Hi, {user}</div>
+        <div className="w-full min-h-screen p-5 bg-[#EDEDED]">
+          <div className="profile w-full flex text-[#2B4993] justify-end text-[1.1rem] font-bold pr-4 my-6 items-center gap-2">
+            <UserIcon
+              className="text-2xl"
+              onClick={() => setShowCard(!showCard)}
+            />
+            <div onClick={() => setShowCard(!showCard)} ref={innerRef}>
+              Hi, {user}
+            </div>
             {showCard ? (
               <div className="absolute translate-y-[5.5rem] z-[999]">
                 <div className="w-52 relative py-[0.62rem] px-[0.60rem] border-gray-100 bg-white rounded-lg drop-shadow-lg items-center">
