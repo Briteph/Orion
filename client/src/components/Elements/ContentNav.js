@@ -103,7 +103,7 @@ function ContentNav({ children }) {
         </div>
         <div className="w-full min-h-screen pt-6 pl-6 bg-[#EDEDED]">
           <div className="profile w-full flex text-[#2B4993] justify-end text-[1.1rem] font-bold pr-4 mb-6 items-center gap-2">
-            <div className="flex items-center gap-2 p-2 rounded-md hover:bg-[#b8c5e6] hover:bg-opacity-30">
+            <div className="flex items-center gap-2 p-2 rounded-md hover:bg-[#b8c5e6] hover:bg-opacity-30 cursor-pointer">
               <UserIcon
                 className="text-2xl"
                 onClick={() => setShowCard(!showCard)}
