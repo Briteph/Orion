@@ -25,7 +25,7 @@ function Dashboard() {
                             <span className='text-[#7F8289] font-bold'>
                                 Show :
                             </span>
-                            <FormSelect defValue={'This Year'} options={[{key:1,value:"Last Year", text:"Last Year"}]} icon = {<SortDown className="text-[#5179DF] absolute bottom-2 right-0"/>} addClass='text-[#5179DF] rounded-lg'/>
+                            <FormSelect defValue={'This Year'} options={[{key:1,value:"Last Year", text:"Last Year"}]} icon = {<SortDown className="text-[#5179DF] absolute bottom-2 right-0"/>} addClass='text-[#5179DF] rounded-lg bg-[#EDEDED] px-5'/>
                         </div>
                     </div>
                     <div className='KPI-container mt-4 flex px-2'>

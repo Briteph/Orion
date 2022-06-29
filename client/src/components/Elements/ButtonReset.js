@@ -15,7 +15,7 @@ function ButtonReset({
                 disabled
                 ? "bg-gray-200"
                 : "hover:bg-[#F47E7E] hover:border-[#F47E7E]"
-            } text-white ${addClass}`}
+            } ${addClass}`}
             disabled={disabled}
             onClick={onClick}
             {...props}
