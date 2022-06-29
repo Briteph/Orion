@@ -12,40 +12,45 @@ function FormSelect({
   icon,
   addClass,
 }) {
-    const [textHighlight, setTextHighlight] = useState(false)
+  const [textHighlight, setTextHighlight] = useState(false);
   return (
     <div>
-        <label
+      <label
         htmlFor={id}
-        className={`${textHighlight? " font-[700] text-[#5179DF] " : " text-[#7F8289] "} ${labelClass}`}
-        >
+        className={`${
+          textHighlight ? " font-[700] text-[#5179DF] " : " text-[#7F8289] "
+        } ${labelClass}`}
+      >
         {children} {required && <span aria-hidden="true">*</span>}
-        </label>
-        <div className="relative rounder-xl">
-            <select
-                name={id}
-                id={id}
-                value={value}
-                className={`w-full font-bold appearance-none focus:outline-none ${addClass}`}
-                onChange={onChange}
-                onFocus={() => {
-                    setTextHighlight(true)
-                }}
-                onBlur={() =>{
-                    setTextHighlight(false)
-                }}
-            >
-                <option value="">{defValue}{}</option>
-                {options.map((option) => (
-                <option key={option.key} value={option.value}>
-                    {option.text}
-                </option>
-                ))}
-            </select>
-            {icon}
-        </div>
+      </label>
+      <div className="relative rounder-xl">
+        <select
+          name={id}
+          id={id}
+          value={value}
+          className={`w-full font-bold appearance-none focus:outline-none ${addClass}`}
+          onChange={onChange}
+          onFocus={() => {
+            setTextHighlight(true);
+          }}
+          onBlur={() => {
+            setTextHighlight(false);
+          }}
+        >
+          <option value="">
+            {defValue}
+            {}
+          </option>
+          {options.map((option) => (
+            <option key={option.key} value={option.value}>
+              {option.text}
+            </option>
+          ))}
+        </select>
+        {icon}
+      </div>
     </div>
-    );
+  );
 }
 
 export default FormSelect;

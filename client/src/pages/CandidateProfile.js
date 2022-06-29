@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "../components/Elements/card";
+import Card from "../components/Elements/Card";
 import ContentNav from "../components/Elements/ContentNav";
 function Candidate() {
   return (

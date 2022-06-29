@@ -5,7 +5,7 @@ import {
   useImperativeHandle,
   forwardRef,
 } from "react";
-import Card from "./card";
+import Card from "./Card";
 
 // @params { children, label, buttonClass, labelClass, iconClass, cardItemClass, menu, dropDownIcon }
 const DropDown = forwardRef((props, ref) => {
@@ -39,13 +39,12 @@ const DropDown = forwardRef((props, ref) => {
   }, [open]);
 
   useEffect(() => {
-    if(props.menu){
+    if (props.menu) {
       const buttonDetails = props.menu.filter((e) => {
         return e.text === props.label.props.value;
       });
       setButtonColor(buttonDetails[0].color);
     }
-    
   }, [buttonColor]);
 
   return (
@@ -60,7 +59,7 @@ const DropDown = forwardRef((props, ref) => {
         {props.dropDownIcon}
         {/* <FiltersIcon className={`${props.iconClass ? props.iconClass : ""}`} /> */}
         <div
-          className={`items-center text-lg font-medium ${
+          className={`flex items-center text-lg font-medium ${
             props.labelClass ? props.labelClass : ""
           }`}
         >

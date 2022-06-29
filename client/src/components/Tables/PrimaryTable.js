@@ -6,12 +6,12 @@ import {
   useSortBy,
   useGlobalFilter,
 } from "react-table";
-import { Checkbox } from "../Forms/FormCheckbox";
-import Card from "../Elements/card";
+import FormCheckbox from "../Forms/FormCheckbox";
+import Card from "../Elements/Card";
 import { BsFillTrashFill as TrashCan } from "react-icons/bs";
 import { FaUserPlus as AddIcon } from "react-icons/fa";
-import ButtonPrimary from "../Elements/buttonPrimary";
-import { GlobalFilter } from "../Elements/GlobalFilter";
+import ButtonPrimary from "../Elements/ButtonPrimary";
+import GlobalFilter from "../Elements/GlobalFilter";
 import DropDown from "../Elements/DropDown";
 import { Link } from "react-router-dom";
 
@@ -47,10 +47,10 @@ function PrimaryTable({
           {
             id: "Selection",
             Header: ({ getToggleAllRowsSelectedProps }) => (
-              <Checkbox {...getToggleAllRowsSelectedProps()} />
+              <FormCheckbox {...getToggleAllRowsSelectedProps()} />
             ),
             Cell: ({ row }) => (
-              <Checkbox {...row.getToggleRowSelectedProps()} />
+              <FormCheckbox {...row.getToggleRowSelectedProps()} />
             ),
           },
           ...columns,
