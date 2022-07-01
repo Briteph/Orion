@@ -11,7 +11,7 @@ import Card from "./Card";
 const DropDown = forwardRef((props, ref) => {
   const innerref = useRef();
   const [open, setOpen] = useState(false);
-  const [buttonColor, setButtonColor] = useState("bg-white");
+  const [buttonColor, setButtonColor] = useState("");
 
   useImperativeHandle(ref, () => ({
     toggle() {
@@ -67,11 +67,11 @@ const DropDown = forwardRef((props, ref) => {
         </div>
       </button>
       <div
-        className={`z-10 absolute sm:right-0 w-screen sm:w-full mt-1 ${
+        className={`z-10 absolute sm:right-0 sm:w-full mt-1 ${
           !open ? "hidden" : ""
         }`}
       >
-        <Card addClass="px-0 py-0">
+        <Card addClass="px-px py-0">
           <div>
             <div
               className={`flex flex-col gap-2 first:pt-2 last:pb-2 items-center ${props.cardItemClass}`}

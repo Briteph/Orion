@@ -65,7 +65,6 @@ function PrimaryTable({
     headerGroups,
     rows,
     prepareRow,
-    selectedFlatRows,
     preGlobalFilteredRows,
     setGlobalFilter,
     state,
@@ -164,11 +163,14 @@ function PrimaryTable({
                                 iconClass="text-white"
                                 menu={statusValue}
                                 ref={dropDownRef}
+                                buttonClass="w-28"
+                                dropDownIcon={<FiltersIcon className="text-white"/>}
+                                cardItemClass='justify-center'
                               >
                                 {statusValue.map((status) => {
                                   return (
                                     <div
-                                      className="hover:bg-[#5179DF] hover:bg-opacity-25"
+                                      className="hover:bg-[#5179DF] hover:bg-opacity-25 w-full px-3 rounded"
                                       onClick={() => {
                                         let newRowState = [...rowState];
                                         newRowState[rowIndex].Status =

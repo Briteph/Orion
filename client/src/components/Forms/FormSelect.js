@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 function FormSelect({
   children,
@@ -12,9 +12,15 @@ function FormSelect({
   icon,
   addClass,
 }) {
+  const [textHighlight, setTextHighlight] = useState(false);
   return (
     <div>
-      <label htmlFor={id} className={"" + labelClass}>
+      <label
+        htmlFor={id}
+        className={`${
+          textHighlight ? " font-[700] text-[#5179DF] " : " text-[#7F8289] "
+        } ${labelClass}`}
+      >
         {children} {required && <span aria-hidden="true">*</span>}
       </label>
       <div className="relative rounder-xl">
@@ -22,10 +28,19 @@ function FormSelect({
           name={id}
           id={id}
           value={value}
-          className={`w-full px-5 font-bold appearance-none bg-[#EDEDED] focus:outline-none ${addClass}`}
+          className={`w-full font-bold appearance-none focus:outline-none ${addClass}`}
           onChange={onChange}
+          onFocus={() => {
+            setTextHighlight(true);
+          }}
+          onBlur={() => {
+            setTextHighlight(false);
+          }}
         >
-          <option value="">{defValue}</option>
+          <option value="">
+            {defValue}
+            {}
+          </option>
           {options.map((option) => (
             <option key={option.key} value={option.value}>
               {option.text}

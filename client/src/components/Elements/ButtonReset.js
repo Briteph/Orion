@@ -13,7 +13,7 @@ function ButtonReset({
       id={id}
       className={`px-3 py-1 rounded-lg text-m uppercase border-2 shadow-sm ${
         disabled ? "bg-gray-200" : "hover:bg-[#F47E7E] hover:border-[#F47E7E]"
-      } text-white ${addClass}`}
+      } ${addClass}`}
       disabled={disabled}
       onClick={onClick}
       {...props}
