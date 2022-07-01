@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.bg-orionBlue {
+  background-color: #2B4993;
+}
+
+.border-orionBlue {
+  border-color: #2B4993;
+}
+
+.bg-orionYellow {
+  background-color: #FEAC00;
+}
+
+.border-orionYellow {
+  border-color: #FEAC00;
+}
+
+.rowContainer + .rowContainer{
+  margin-top: 1rem;
+}
+
+/* .tab + .tab{
+  margin-left: 1rem;
+} */
+
+.CardKPI + .CardKPI {
+  margin-left: 1.2rem;
+}
+
+/* scrollbar for firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(145, 145, 145, 0.76) transparent;
+}
+
+/* scrollbar for Chrome, EDGE, Opera, Others */
+::-webkit-scrollbar {
+  width: 0.42rem;
+  margin-left: 2px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background: rgba(175, 175, 175, 0.616);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(145, 145, 145, 0.76);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3a3a;
+}
