@@ -170,7 +170,7 @@ function PrimaryTable({
                                 {statusValue.map((status) => {
                                   return (
                                     <div
-                                      className="hover:bg-[#5179DF] hover:bg-opacity-25 w-full"
+                                      className="hover:bg-[#5179DF] hover:bg-opacity-25 w-full px-3 rounded"
                                       onClick={() => {
                                         let newRowState = [...rowState];
                                         newRowState[rowIndex].Status =

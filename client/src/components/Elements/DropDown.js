@@ -67,7 +67,7 @@ const DropDown = forwardRef((props, ref) => {
         </div>
       </button>
       <div
-        className={`z-10 absolute sm:right-0 w-screen sm:w-full mt-1 ${
+        className={`z-10 absolute sm:right-0 sm:w-full mt-1 ${
           !open ? "hidden" : ""
         }`}
       >
