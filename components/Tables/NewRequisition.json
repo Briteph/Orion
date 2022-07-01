@@ -1,0 +1,6 @@
+[
+ {"Position": "House Cleaner", "Code": "001", "Client_Name": "Hotel 1", "Address": "1F, Corner St.Bldg. A, New York"},
+ {"Position": "Room Attendant", "Code": "002", "Client_Name": "Hotel 2", "Address": "St.Bldg. A, Iligan City"},
+ {"Position": "Room Attendant", "Code": "003", "Client_Name": "Hotel 3", "Address": "Iligan City"},
+ {"Position": "Frontdesk Clerk", "Code": "003", "Client_Name": "Hotel 4", "Address": "Iligan City"}
+]

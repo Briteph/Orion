@@ -1,0 +1,12 @@
+[
+    {"ID": 1, "Status": "Open", "Position": "Room Attendant", "Code": "001", "Client_Name":"Hotel 1", "Address": "St.Bldg. A, Iligan City", "Date_Created": "03/10/2022"},
+    {"ID": 2, "Status": "Closed", "Position": "Room Attendant", "Code": "002", "Client_Name":"Hotel 2", "Address": "St.Bldg. A, Iligan City", "Date_Created": "01/30/2023"},
+    {"ID": 3, "Status": "Filled", "Position": "Frontdesk Clerk", "Code": "003", "Client_Name":"Hotel 3", "Address": "Iligan City", "Date_Created": "06/10/2025"},
+    {"ID": 4, "Status": "Open", "Position": "Room Attendant", "Code": "001", "Client_Name":"Hotel 1", "Address": "St.Bldg. A, Iligan City", "Date_Created": "03/10/2022"},
+    {"ID": 5, "Status": "Closed", "Position": "Room Attendant", "Code": "002", "Client_Name":"Hotel 2", "Address": "St.Bldg. A, Iligan City", "Date_Created": "01/30/2023"},
+    {"ID": 6, "Status": "Filled", "Position": "Frontdesk Clerk", "Code": "003", "Client_Name":"Hotel 3", "Address": "Iligan City", "Date_Created": "06/10/2025"},
+    {"ID": 7, "Status": "Open", "Position": "Room Attendant", "Code": "001", "Client_Name":"Hotel 1", "Address": "St.Bldg. A, Iligan City", "Date_Created": "03/10/2022"},
+    {"ID": 8, "Status": "Closed", "Position": "Room Attendant", "Code": "002", "Client_Name":"Hotel 2", "Address": "St.Bldg. A, Iligan City", "Date_Created": "01/30/2023"},
+    {"ID": 9, "Status": "Filled", "Position": "Frontdesk Clerk", "Code": "003", "Client_Name":"Hotel 3", "Address": "Iligan City", "Date_Created": "06/10/2025"},
+    {"ID": 10, "Status": "Open", "Position": "Room Attendant", "Code": "001", "Client_Name":"Hotel 1", "Address": "St.Bldg. A, Iligan City", "Date_Created": "03/10/2022"}
+   ]
