@@ -20,7 +20,7 @@ function Candidate() {
         <title>Candidate Profile - Orion</title>
       </Head>
       <ContentNav>
-        <div className="flex gap-6 pt-14 pr-5">
+        <div className="flex gap-6 pt-14">
           <Card addClass="w-1/3">
             <div className="-translate-y-20 w-[165px] h-[165px] bg-white rounded-full drop-shadow-md flex items-center justify-center">
               <Image
@@ -60,7 +60,7 @@ function Candidate() {
             </Tab>
           </Card>
         </div>
-        <div className="flex gap-5 pr-5 mt-12">
+        <div className="flex gap-5 mt-12">
           <div className="grow">
             <div className="pb-5 pl-5 text-xl font-bold text-gray-500">
               Open

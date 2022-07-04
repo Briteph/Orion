@@ -10,27 +10,25 @@ export default function Tooltip({ children, title, position }) {
   };
 
   return (
-    <>
-      <div
-        onMouseEnter={() => setHover(true)}
-        onMouseLeave={() => setHover(false)}
-        className="flex items-center justify-center"
-      >
-        {children}
-        {hover ? (
-          <div
-            className={`
-              absolute 
-              text-xs text-white p-2 rounded-md bg-gray-600
-            `}
-            style={{ transform: tooltipPosition[position] }}
-          >
-            {title}
-          </div>
-        ) : (
-          ""
-        )}
-      </div>
-    </>
+    <div
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+      className="flex items-center justify-center"
+    >
+      {children}
+      {hover ? (
+        <div
+          className={`
+            absolute z-[9999]
+            text-xs text-white p-2 rounded-md bg-gray-600
+          `}
+          style={{ transform: tooltipPosition[position] }}
+        >
+          {title}
+        </div>
+      ) : (
+        ""
+      )}
+    </div>
   );
 }

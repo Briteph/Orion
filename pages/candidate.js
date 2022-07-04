@@ -8,7 +8,7 @@ function CandidateTab() {
   return (
     <>
       <ContentNav>
-        <div className="Table pr-4">
+        <div className="Table">
           <PrimaryTable
             entryData={Candidates}
             tableColumns={CandidateCOLUMNS}
