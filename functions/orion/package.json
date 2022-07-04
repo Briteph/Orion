@@ -1,9 +1,0 @@
-{
-	"name": "orion",
-	"version": "1.0.0",
-	"main": "index.js",
-	"author": "developers@briteph.com",
-	"dependencies": {
-		"zcatalyst-sdk-node": "latest"
-	}
-}
