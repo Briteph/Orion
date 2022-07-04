@@ -7,15 +7,17 @@ import { BsFillBriefcaseFill as Candidate } from "react-icons/bs";
 import {
   FaChair as Requisition,
   FaUserCircle as UserIcon,
+  FaChevronLeft as BackIcon,
 } from "react-icons/fa";
 import { IoIosSettings as Settings } from "react-icons/io";
 import useWindowSize from "../../hooks/useWindowSize";
+import Tooltip from "./Tooltip";
 
 function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window;
   return {
     width,
-    height
+    height,
   };
 }
 
@@ -101,7 +103,27 @@ function ContentNav({ children }) {
           </div>
         </div>
         <div className="w-full min-h-screen pt-6 pl-6 bg-[#EDEDED]">
-          <div className="profile w-full flex text-[#2B4993] justify-end text-[1.1rem] font-bold pr-4 mb-6 items-center gap-2">
+          <div
+            className={`profile w-full flex text-[#2B4993] 
+            ${
+              router.pathname.match(/[\/]/g).length > 1
+                ? "justify-between"
+                : "justify-end"
+            }
+            text-[1.1rem] font-bold pr-4 mb-6 items-center gap-2`}
+          >
+            {router.pathname.match(/[\/]/g).length > 1 ? (
+              <Tooltip title="Back" position="bottom">
+                <div
+                  className="flex items-center rounded-md cursor-pointer p-2 hover:bg-[#b8c5e6] hover:bg-opacity-30"
+                  onClick={() => router.back()}
+                >
+                  <BackIcon />
+                </div>
+              </Tooltip>
+            ) : (
+              ""
+            )}
             <div className="flex items-center gap-2 p-2 rounded-md hover:bg-[#b8c5e6] hover:bg-opacity-30 cursor-pointer">
               <UserIcon
                 className="text-2xl"
