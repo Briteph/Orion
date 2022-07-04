@@ -7,22 +7,24 @@ import { BsFillBriefcaseFill as Candidate } from "react-icons/bs";
 import {
   FaChair as Requisition,
   FaUserCircle as UserIcon,
+  FaChevronLeft as BackIcon,
 } from "react-icons/fa";
 import { IoIosSettings as Settings } from "react-icons/io";
 import useWindowSize from "../../hooks/useWindowSize";
+import Tooltip from "./Tooltip";
 
 function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window;
   return {
     width,
-    height
+    height,
   };
 }
 
 function ContentNav({ children }) {
   const router = useRouter();
   const [showCard, setShowCard] = useState(false);
-  const innerRef = useRef();
+  const menuRef = useRef();
   const { height, width } = useWindowSize();
   const user = "Zach";
 
@@ -30,8 +32,8 @@ function ContentNav({ children }) {
     function checkForOutsideClick(event) {
       if (
         showCard &&
-        innerRef.current &&
-        !innerRef.current.contains(event.target)
+        menuRef.current &&
+        !menuRef.current.contains(event.target)
       ) {
         setShowCard(false);
       }
@@ -100,55 +102,75 @@ function ContentNav({ children }) {
             </Link>
           </div>
         </div>
-        <div className="w-full min-h-screen pt-6 pl-6 bg-[#EDEDED]">
-          <div className="profile w-full flex text-[#2B4993] justify-end text-[1.1rem] font-bold pr-4 mb-6 items-center gap-2">
+        <div className="w-full min-h-screen pl-6 bg-[#EDEDED]">
+          <div
+            className={`profile w-full flex text-[#2B4993] 
+            ${
+              router.pathname.match(/[\/]/g).length > 1
+                ? "justify-between"
+                : "justify-end"
+            }
+            text-[1.1rem] font-bold items-center gap-2 py-6 pr-6`}
+          >
+            {router.pathname.match(/[\/]/g).length > 1 ? (
+              <Tooltip title="Back" position="bottom">
+                <div
+                  className="flex items-center rounded-md cursor-pointer p-2 hover:bg-[#b8c5e6] hover:bg-opacity-30"
+                  onClick={() => router.back()}
+                >
+                  <BackIcon />
+                </div>
+              </Tooltip>
+            ) : (
+              ""
+            )}
             <div className="flex items-center gap-2 p-2 rounded-md hover:bg-[#b8c5e6] hover:bg-opacity-30 cursor-pointer">
               <UserIcon
                 className="text-2xl"
                 onClick={() => setShowCard(!showCard)}
               />
-              <div onClick={() => setShowCard(!showCard)} ref={innerRef}>
+              <div onClick={() => setShowCard(!showCard)} ref={menuRef}>
                 Hi, {user}
               </div>
-            </div>
-            {showCard ? (
-              <div className="absolute translate-y-[5.5rem] z-[999]">
-                <div className="w-52 relative py-[0.62rem] px-[0.60rem] border-gray-100 bg-white rounded-lg drop-shadow-lg items-center">
-                  <div className="flex flex-col gap-1 text-lg uppercase">
-                    <button className="rounded p-1 text-[#2B4993] hover:bg-[#5179DF] hover:bg-opacity-25 w-full">
-                      <div className="flex items-center justify-between w-full">
-                        <div className="flex items-center gap-2">
-                          <UserIcon className="text-2xl" />
-                          <div>Profile</div>
+              {showCard ? (
+                <div className="absolute translate-y-[5.5rem] z-[999]">
+                  <div className="w-52 relative py-[0.62rem] px-[0.60rem] border-gray-100 bg-white rounded-lg drop-shadow-lg items-center">
+                    <div className="flex flex-col gap-1 text-lg uppercase">
+                      <button className="rounded p-1 text-[#2B4993] hover:bg-[#5179DF] hover:bg-opacity-25 w-full">
+                        <div className="flex items-center justify-between w-full">
+                          <div className="flex items-center gap-2">
+                            <UserIcon className="text-2xl" />
+                            <div>Profile</div>
+                          </div>
+                          <div>{`>`}</div>
                         </div>
-                        <div>{`>`}</div>
-                      </div>
-                    </button>
-                    <button className="rounded p-1 text-[#2B4993] hover:bg-[#5179DF] hover:bg-opacity-25 w-full">
-                      <div className="flex items-center justify-between w-full">
-                        <div className="flex items-center gap-2">
-                          <Settings className="text-2xl" />
-                          <div>Settings</div>
+                      </button>
+                      <button className="rounded p-1 text-[#2B4993] hover:bg-[#5179DF] hover:bg-opacity-25 w-full">
+                        <div className="flex items-center justify-between w-full">
+                          <div className="flex items-center gap-2">
+                            <Settings className="text-2xl" />
+                            <div>Settings</div>
+                          </div>
+                          <div>{`>`}</div>
                         </div>
-                        <div>{`>`}</div>
-                      </div>
-                    </button>
-                    <button className="rounded p-1 text-[#2B4993] hover:bg-[#5179DF] hover:bg-opacity-25 w-full">
-                      <div className="flex items-center justify-between w-full">
-                        <div className="flex items-center gap-2">
-                          <Logout className="text-2xl" />
-                          <div>Logout</div>
+                      </button>
+                      <button className="rounded p-1 text-[#2B4993] hover:bg-[#5179DF] hover:bg-opacity-25 w-full">
+                        <div className="flex items-center justify-between w-full">
+                          <div className="flex items-center gap-2">
+                            <Logout className="text-2xl" />
+                            <div>Logout</div>
+                          </div>
                         </div>
-                      </div>
-                    </button>
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ) : (
-              ""
-            )}
+              ) : (
+                ""
+              )}
+            </div>
           </div>
-          <div className={`overflow-y-auto h-[${height}px]`}>{children}</div>
+          <div className="overflow-y-auto pr-6" style={{height: `${height-92}px`}}>{children}</div>
         </div>
       </div>
     </>
