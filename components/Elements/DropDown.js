@@ -10,8 +10,10 @@ import Card from "./Card";
 // @params { children, label, buttonClass, labelClass, iconClass, cardItemClass, menu, dropDownIcon }
 const DropDown = forwardRef((props, ref) => {
   const innerref = useRef();
+  const buttonRef = useRef();
   const [open, setOpen] = useState(false);
   const [buttonColor, setButtonColor] = useState("");
+  const [menuWidth, setMenuWidth] = useState(0);
 
   useImperativeHandle(ref, () => ({
     toggle() {
@@ -39,6 +41,10 @@ const DropDown = forwardRef((props, ref) => {
   }, [open]);
 
   useEffect(() => {
+    setMenuWidth(buttonRef.current.clientWidth);
+  }, []);
+
+  useEffect(() => {
     if (props.menu) {
       const buttonDetails = props.menu.filter((e) => {
         return e.text === props.label.props.value;
@@ -48,38 +54,34 @@ const DropDown = forwardRef((props, ref) => {
   }, [buttonColor]);
 
   return (
-    <div className="relative" ref={innerref}>
+    <div ref={innerref}>
       <button
-        className={`flex items-center justify-center gap-2 px-1 py-1 w-28 ${
-          props.buttonClass ? props.buttonClass : ""
-        } ${buttonColor} rounded-lg`}
+        className={`
+          flex items-center justify-center gap-2 px-1 py-1 w-28 rounded-lg
+          ${props.buttonClass ? props.buttonClass : ""}
+          ${buttonColor} 
+        `}
+        ref={buttonRef}
         onClick={() => setOpen(!open)}
-        aria-label={`${open ? "Hide filters menu" : "Show filters menu"}`}
       >
         {props.dropDownIcon}
-        {/* <FiltersIcon className={`${props.iconClass ? props.iconClass : ""}`} /> */}
         <div
-          className={`flex items-center text-lg font-medium ${
-            props.labelClass ? props.labelClass : ""
-          }`}
+          className={`
+            flex items-center text-lg font-medium
+            ${props.labelClass ? props.labelClass : ""}
+          `}
         >
           {props.label}
         </div>
       </button>
       <div
-        className={`z-10 absolute sm:right-0 sm:w-full mt-1 ${
-          !open ? "hidden" : ""
-        }`}
+        className={`
+          z-10 absolute border-gray-100 bg-white rounded-lg drop-shadow-lg
+          ${!open ? "hidden" : ""}
+        `}
+        style={{width: `${menuWidth}px`}}
       >
-        <Card addClass="px-px py-0">
-          <div>
-            <div
-              className={`flex flex-col gap-2 first:pt-2 last:pb-2 items-center ${props.cardItemClass}`}
-            >
-              {props.children}
-            </div>
-          </div>
-        </Card>
+        <div className={`flex flex-col gap-1 items-center ${props.cardItemClass}`}>{props.children}</div>
       </div>
     </div>
   );
