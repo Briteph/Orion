@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import Link from "next/link";
 import ButtonSecondary from "../components/Elements/ButtonSecondary.js";
 import CardKPI from "../components/Cards/CardKPI.js";
@@ -13,28 +13,51 @@ import {
   NewCandidateCOLUMNS,
   NewRequisitionCOLUMNS,
 } from "../components/Tables/Columns";
-import FormSelect from "../components/Forms/FormSelect.js";
-import { FaSortDown as SortDown } from "react-icons/fa";
+import DropDown from "../components/Elements/DropDown";
+import { BsFilter as FilterIcon } from "react-icons/bs";
+import Head from "next/head.js";
 
 function Dashboard() {
+  const dropdownRef = useRef();
+  const [filterState, setFilterState] = useState("This Year");
+
   return (
     <>
+      <Head>
+        <title>Orion</title>
+      </Head>
       <ContentNav>
         <div className="DashboardContainer">
-          <div className="flex items-center">
-            <div className="text-[#333333] font-bold text-[20px] mr-20">
+          <div className="flex items-center gap-5">
+            <div className="text-[#333333] font-bold text-[20px]">
               Overview
             </div>
-            <div className="flex ">
-              <span className="text-[#7F8289] font-bold">Show :</span>
-              <FormSelect
-                defValue={"This Year"}
-                options={[{ key: 1, value: "Last Year", text: "Last Year" }]}
-                icon={
-                  <SortDown className="text-[#5179DF] absolute bottom-2 right-0" />
-                }
-                addClass="text-[#5179DF] rounded-lg"
-              />
+            <div>
+              <DropDown
+                dropDownIcon={<FilterIcon className="text-xl" />}
+                label={filterState}
+                buttonClass="hover:bg-[#5179DF] hover:bg-opacity-25 rounded"
+                ref={dropdownRef}
+              >
+                <div className="py-1 w-full">
+                  <div className="hover:bg-[#5179DF] hover:bg-opacity-25 rounded text-center"
+                    onClick={() => {
+                      setFilterState("This Year");
+                      dropdownRef.current.toggle();
+                    }}
+                  >
+                    This Year
+                  </div>
+                  <div className="hover:bg-[#5179DF] hover:bg-opacity-25 rounded text-center"
+                    onClick={() => {
+                      setFilterState("Last Year");
+                      dropdownRef.current.toggle();
+                    }}
+                  >
+                    Last Year
+                  </div>
+                </div>
+              </DropDown>
             </div>
           </div>
           <div className="flex flex-wrap gap-3 px-2 mt-4 sm:flex-nowrap KPI-container">
@@ -42,27 +65,27 @@ function Dashboard() {
               header="Total Requisition"
               subHeader="123"
               subSpan="21"
-              spanColor={{incline:"text-green-500", decline: "text-red-500"}}
+              spanColor={{ incline: "text-green-500", decline: "text-red-500" }}
               decline={true}
             />
             <CardKPI
               header="Total Candidates"
               subHeader="23"
               subSpan="10"
-              spanColor={{incline:"text-green-500", decline: "text-red-500"}}
+              spanColor={{ incline: "text-green-500", decline: "text-red-500" }}
             />
             <CardKPI
               header="Total Employees"
               subHeader="50"
               subSpan="30"
-              spanColor={{incline:"text-green-500", decline: "text-red-500"}}
+              spanColor={{ incline: "text-green-500", decline: "text-red-500" }}
               decline={true}
             />
             <CardKPI
               header="Total Earnings"
               subHeader="12,000"
               subSpan="4"
-              spanColor={{incline:"text-green-500", decline: "text-red-500"}}
+              spanColor={{ incline: "text-green-500", decline: "text-red-500" }}
             />
           </div>
           <div className="flex flex-col flex-wrap gap-5 px-2 mt-10 sm:flex-row sm:flex-nowrap">
@@ -71,7 +94,7 @@ function Dashboard() {
                 <div className="text-[#2B4993] font-bold text-[20px]">
                   New Candidate
                 </div>
-                <Link href={"/candidate/add-candidate"}>
+                <Link href={"/candidates/add-candidate"}>
                   <ButtonSecondary addClass="text-white flex items-center text-[14px]">
                     <span className="mr-1">
                       <AddIcon />
@@ -101,7 +124,7 @@ function Dashboard() {
                 <div className="text-[#2B4993] font-bold text-[20px]">
                   New Requisition
                 </div>
-                <Link href={"/requistion/add-requisition"}>
+                <Link href={"/requisitions/add-requisition"}>
                   <ButtonSecondary addClass="text-white flex items-center ">
                     <span className="mr-1">
                       <AddIcon />
