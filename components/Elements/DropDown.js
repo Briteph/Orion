@@ -5,9 +5,8 @@ import {
   useImperativeHandle,
   forwardRef,
 } from "react";
-import Card from "./Card";
 
-// @params { children, label, buttonClass, labelClass, iconClass, cardItemClass, menu, dropDownIcon }
+// @params { children, label, buttonClass, labelClass, cardItemClass, menu, dropDownIcon }
 const DropDown = forwardRef((props, ref) => {
   const innerref = useRef();
   const buttonRef = useRef();
@@ -57,31 +56,39 @@ const DropDown = forwardRef((props, ref) => {
     <div ref={innerref}>
       <button
         className={`
-          flex items-center justify-center gap-2 px-1 py-1 w-28 rounded-lg
+          flex items-center justify-center gap-2 p-1 rounded-lg
           ${props.buttonClass ? props.buttonClass : ""}
           ${buttonColor} 
         `}
         ref={buttonRef}
         onClick={() => setOpen(!open)}
       >
-        {props.dropDownIcon}
-        <div
-          className={`
+        {props.dropDownIcon ? props.dropDownIcon : ""}
+        {props.label ? (
+          <div
+            className={`
             flex items-center text-lg font-medium
             ${props.labelClass ? props.labelClass : ""}
           `}
-        >
-          {props.label}
-        </div>
+          >
+            {props.label}
+          </div>
+        ) : (
+          ""
+        )}
       </button>
       <div
         className={`
           z-10 absolute border-gray-100 bg-white rounded-lg drop-shadow-lg
           ${!open ? "hidden" : ""}
         `}
-        style={{width: `${menuWidth}px`}}
+        style={{ width: `${menuWidth}px` }}
       >
-        <div className={`flex flex-col gap-1 items-center ${props.cardItemClass}`}>{props.children}</div>
+        <div
+          className={`flex flex-col gap-1 items-center ${props.cardItemClass}`}
+        >
+          {props.children}
+        </div>
       </div>
     </div>
   );
