@@ -36,7 +36,7 @@ function Dashboard() {
               <DropDown
                 dropDownIcon={<FilterIcon className="text-xl" />}
                 label={filterState}
-                buttonClass="hover:bg-[#5179DF] hover:bg-opacity-25 rounded"
+                buttonClass="hover:bg-[#5179DF] hover:bg-opacity-10 rounded"
                 ref={dropdownRef}
               >
                 <div className="py-1 w-full">
