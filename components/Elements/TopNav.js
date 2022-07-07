@@ -14,13 +14,8 @@ export default function TopNav() {
   const [showCard, setShowCard] = useState(false);
   const menuRef = useRef();
   const router = useRouter();
-  const [isDisplayingInfo, setIsDisplayingInfo] = useState(false);
-  const urls = ["/add-requisition", "/add-candidate", "/info", "/profile"];
   const user = "Zach";
-
-  useEffect(() => {
-    setIsDisplayingInfo(urls.some((e) => router.pathname.includes(e)));
-  }, []);
+  const isChildPage = router.pathname.match(/[\/]/g).length > 1;
 
   useEffect(() => {
     function checkForOutsideClick(event) {
@@ -138,10 +133,10 @@ export default function TopNav() {
   return (
     <div
       className={`profile w-full flex text-[#2B4993] 
-      ${isDisplayingInfo ? "justify-between" : "justify-end"}
+      ${isChildPage ? "justify-between" : "justify-end"}
       text-[1.1rem] font-bold items-center gap-2 py-6 pr-6`}
     >
-      {isDisplayingInfo ? <MenuBar /> : ""}
+      {isChildPage ? <MenuBar /> : ""}
       <div
         className="flex items-center justify-end gap-2 p-2 rounded-md hover:bg-[#b8c5e6] hover:bg-opacity-30 cursor-pointer"
         ref={menuRef}
